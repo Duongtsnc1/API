@@ -1,0 +1,3469 @@
+{
+	"info": {
+		"_postman_id": "2b64019f-5ebd-44a7-934b-f5490cd16209",
+		"name": "SupportCustomer",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Authenticate",
+			"item": [
+				{
+					"name": "LoginToken",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\":\"admin\",\r\n    \"password\":\"123456\"\r\n}"
+						},
+						"url": {
+							"raw": "http://{{url}}:{{port}}/api/auth/login",
+							"protocol": "http",
+							"host": [
+								"{{url}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"api",
+								"auth",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetCurrentUser",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJNYU5oYW5WaWVuIjoiS0gwMDIiLCJUZW4iOiJExrDGoW5nIiwiSG8iOiJCw7lpIFbEg24iLCJ1bmlxdWVfbmFtZSI6IkLDuWkgVsSDbkTGsMahbmciLCJFbWFpbCI6InJpc2VvZmtpbmdkb20wMTFAZ21haWwuY29tIiwiVXNlck5hbWUiOiJkdW9uZ3RzbmMxIiwicm9sZSI6Iktow6FjaCBow6BuZyIsImp0aSI6IjBiMjVmNmQ3LTNmOTQtNGZmMi1hMjhjLWQ3M2NiOWUzNDJmYyIsIm5iZiI6MTYyNTY0MDk4OCwiZXhwIjoxNjU3MTc2OTg4LCJpYXQiOjE2MjU2NDA5ODh9.pG76B2OBLp2Ort7zmcVQPRr0aYN9twy_JBj7grvBT7w",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://{{url}}:{{port}}/api/auth/usercurrent",
+							"protocol": "http",
+							"host": [
+								"{{url}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"api",
+								"auth",
+								"usercurrent"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ForgetPasswordKhachHang",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\":\"riseofkingdom011@gmail.com\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://{{url}}:{{port}}/api/auth/khachhang-matkhaumoi",
+							"protocol": "http",
+							"host": [
+								"{{url}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"api",
+								"auth",
+								"khachhang-matkhaumoi"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ForgetPasswordNhanVien",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\":\"riseofkingdom011@gmail.com\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://{{url}}:{{port}}/api/auth/nhanvien-matkhaumoi",
+							"protocol": "http",
+							"host": [
+								"{{url}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"api",
+								"auth",
+								"nhanvien-matkhaumoi"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DoiMatKhauKhachHang",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJNYU5oYW5WaWVuIjoiS0gwMDIiLCJUZW4iOiJExrDGoW5nIiwiSG8iOiJCw7lpIFbEg24iLCJ1bmlxdWVfbmFtZSI6IkLDuWkgVsSDbkTGsMahbmciLCJFbWFpbCI6InJpc2VvZmtpbmdkb20wMTFAZ21haWwuY29tIiwiVXNlck5hbWUiOiJkdW9uZ3RzbmMxIiwicm9sZSI6Iktow6FjaCBow6BuZyIsImp0aSI6IjBiMjVmNmQ3LTNmOTQtNGZmMi1hMjhjLWQ3M2NiOWUzNDJmYyIsIm5iZiI6MTYyNTY0MDk4OCwiZXhwIjoxNjU3MTc2OTg4LCJpYXQiOjE2MjU2NDA5ODh9.pG76B2OBLp2Ort7zmcVQPRr0aYN9twy_JBj7grvBT7w",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"manhanvien\":\"KH001\",\r\n    \"oldpassword\":\"QO1BlC6l\",\r\n    \"newpassword\":\"123456\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://{{url}}:{{port}}/api/auth/khachhang-doimatkhau",
+							"protocol": "http",
+							"host": [
+								"{{url}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"api",
+								"auth",
+								"khachhang-doimatkhau"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DoiMatKhauNhanVien",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJNYU5oYW5WaWVuIjoiTlYwMDMiLCJUZW4iOiJMeSIsIkhvIjoiQ2FvIiwidW5pcXVlX25hbWUiOiJDYW9MeSIsIkVtYWlsIjoiTHlAZ21haWwuY29tIiwiVXNlck5hbWUiOiJ4dWF0YmFuIiwianRpIjoiNTc4ZDIzMDAtZDkyMC00OWRjLWE2MzktZWNhYWU1YmU4NzJkIiwicm9sZSI6Ilh14bqldCBi4bqjbiIsIm5iZiI6MTYyNTY0Njk3NiwiZXhwIjoxNjU3MTgyOTc2LCJpYXQiOjE2MjU2NDY5NzZ9.1P1SnmMJ1Gx9LeAzNo790wDutJ7GIsguWbeyuu3amsY",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"manhanvien\":\"NV006\",\r\n    \"oldpassword\":\"o5EHzePC\",\r\n    \"newpassword\":\"123456\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://{{url}}:{{port}}/api/auth/nhanvien-doimatkhau",
+							"protocol": "http",
+							"host": [
+								"{{url}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"api",
+								"auth",
+								"nhanvien-doimatkhau"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "HoiDap",
+			"item": [
+				{
+					"name": "TimKiem_HoiDap_KhachHang",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJNYU5oYW5WaWVuIjoiTlYwMDEiLCJUZW4iOiJIb8OgbmciLCJIbyI6Ik5ndXnhu4VuICIsInVuaXF1ZV9uYW1lIjoiTmd1eeG7hW4gSG_DoG5nIiwiRW1haWwiOiJIb2FuZ0BnbWFpbC5jb20iLCJVc2VyTmFtZSI6ImhvYW5nZHoiLCJqdGkiOiI0NDEwZTkyZS1iMGQ2LTRlN2ItYWU1My04NTgwMmM3M2E1NjIiLCJyb2xlIjpbIkJpw6puIHThuq1wIiwiQWRtaW4iXSwibmJmIjoxNjI0NTA2MjU1LCJleHAiOjE2NTYwNDIyNTUsImlhdCI6MTYyNDUwNjI1NX0.qsNe8Hpf_zOcNmKQR8GRPba9xg1HYe94xWbq2NNdA8M",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://{{url}}:{{port}}/api/hoidap/khachhang?tenkhachhang=Bùi&pagenumber=2&pagesize=1",
+							"protocol": "http",
+							"host": [
+								"{{url}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"api",
+								"hoidap",
+								"khachhang"
+							],
+							"query": [
+								{
+									"key": "tenkhachhang",
+									"value": "Bùi"
+								},
+								{
+									"key": "pagenumber",
+									"value": "2",
+									"description": "Vị trí trang hiện tại"
+								},
+								{
+									"key": "pagesize",
+									"value": "1",
+									"description": "Số lượng bản ghi trong 1 trang"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "TimKiem_HoiDap_NhanVien",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJNYU5oYW5WaWVuIjoiTlYwMDEiLCJUZW4iOiJIb8OgbmciLCJIbyI6Ik5ndXnhu4VuICIsInVuaXF1ZV9uYW1lIjoiTmd1eeG7hW4gSG_DoG5nIiwiRW1haWwiOiJIb2FuZ0BnbWFpbC5jb20iLCJVc2VyTmFtZSI6ImhvYW5nZHoiLCJqdGkiOiI0NDEwZTkyZS1iMGQ2LTRlN2ItYWU1My04NTgwMmM3M2E1NjIiLCJyb2xlIjpbIkJpw6puIHThuq1wIiwiQWRtaW4iXSwibmJmIjoxNjI0NTA2MjU1LCJleHAiOjE2NTYwNDIyNTUsImlhdCI6MTYyNDUwNjI1NX0.qsNe8Hpf_zOcNmKQR8GRPba9xg1HYe94xWbq2NNdA8M",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://{{url}}:{{port}}/api/hoidap/nhanvien?tennhanvien=Hoàng&pagenumber=2&pagesize=2",
+							"protocol": "http",
+							"host": [
+								"{{url}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"api",
+								"hoidap",
+								"nhanvien"
+							],
+							"query": [
+								{
+									"key": "tennhanvien",
+									"value": "Hoàng"
+								},
+								{
+									"key": "pagenumber",
+									"value": "2",
+									"description": "Vị trí trang hiện tại"
+								},
+								{
+									"key": "pagesize",
+									"value": "2",
+									"description": "Số lượng bản ghi trong 1 trang"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "TimKiem_HoiDap_SanPham",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJNYU5oYW5WaWVuIjoiTlYwMDEiLCJUZW4iOiJIb8OgbmciLCJIbyI6Ik5ndXnhu4VuICIsInVuaXF1ZV9uYW1lIjoiTmd1eeG7hW4gSG_DoG5nIiwiRW1haWwiOiJIb2FuZ0BnbWFpbC5jb20iLCJVc2VyTmFtZSI6ImhvYW5nZHoiLCJqdGkiOiI0NDEwZTkyZS1iMGQ2LTRlN2ItYWU1My04NTgwMmM3M2E1NjIiLCJyb2xlIjpbIkJpw6puIHThuq1wIiwiQWRtaW4iXSwibmJmIjoxNjI0NTA2MjU1LCJleHAiOjE2NTYwNDIyNTUsImlhdCI6MTYyNDUwNjI1NX0.qsNe8Hpf_zOcNmKQR8GRPba9xg1HYe94xWbq2NNdA8M",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://{{url}}:{{port}}/api/hoidap/sanpham?tensanpham=asus&pagenumber=1&pagesize=2",
+							"protocol": "http",
+							"host": [
+								"{{url}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"api",
+								"hoidap",
+								"sanpham"
+							],
+							"query": [
+								{
+									"key": "tensanpham",
+									"value": "asus"
+								},
+								{
+									"key": "pagenumber",
+									"value": "1",
+									"description": "Vị trí trang hiện tại"
+								},
+								{
+									"key": "pagesize",
+									"value": "2",
+									"description": "Số lượng bản ghi trong 1 trang"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Them_CauHoi",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJNYU5oYW5WaWVuIjoiS0gwMDIiLCJUZW4iOiJExrDGoW5nIiwiSG8iOiJCw7lpIFbEg24iLCJ1bmlxdWVfbmFtZSI6IkLDuWkgVsSDbkTGsMahbmciLCJFbWFpbCI6IkR1b25nQGdtYWlsLmNvbSIsIlVzZXJOYW1lIjoiZHVvbmd0c25jMSIsInJvbGUiOiJLaMOhY2ggaMOgbmciLCJqdGkiOiJiOWU3YTQ2Ny0yYzY1LTQyMzgtOTM5OS1lYWE3Y2ZkYzBkZTYiLCJuYmYiOjE2MjQ4NjY2NDYsImV4cCI6MTY1NjQwMjY0NiwiaWF0IjoxNjI0ODY2NjQ2fQ.pVrw6iffeOJ5siWDi8ntS2MpDqDnNpypDpfppYGKjNg",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"tieude\":\"co tieu de\",\r\n    \"ndhoidap\":\"bui thanh hoang test\",\r\n    \"makhachhang\":\"KH003\",\r\n    \"maloai\":\"LHD002\",\r\n    \"masanpham\":\"SP003\",\r\n    \"ngaynhan\":\"22-10-2020\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://{{url}}:{{port}}/api/hoidap/",
+							"protocol": "http",
+							"host": [
+								"{{url}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"api",
+								"hoidap",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "XuLy_HoiDap",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJNYU5oYW5WaWVuIjoiTlYwMDEiLCJUZW4iOiJIb8OgbmciLCJIbyI6Ik5ndXnhu4VuICIsInVuaXF1ZV9uYW1lIjoiTmd1eeG7hW4gSG_DoG5nIiwiRW1haWwiOiJIb2FuZ0BnbWFpbC5jb20iLCJVc2VyTmFtZSI6ImhvYW5nZHoiLCJqdGkiOiI5OGEwZmZmYS1mYTA1LTQzN2MtOGQ1NC02MTU0Y2UxZjgyNTYiLCJyb2xlIjoiQmnDqm4gdOG6rXAiLCJuYmYiOjE2MjQ4Njg0MTAsImV4cCI6MTY1NjQwNDQxMCwiaWF0IjoxNjI0ODY4NDEwfQ.0YdN2Lm0DDTjmkL4wZ2nF7OqA2hcd2AKr-F6uzA8zBY",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"manhanvien\":\"NV003\",\r\n    \"tieude\":\"co tieu de\",\r\n    \"mahoidap\":\"HD0_00000004\",\r\n    \"noidungthuchien\":\"thuc hien theo quyen xuất bản\",\r\n    \"ngaythang\":\"23-09-2021\",\r\n    \"quyen\":\"Xuất bản\",\r\n    \"ndhoidapedit\":\"bui than hhoang\",\r\n    \"ngayxuatban\":\"20-11-2021\",\r\n    \"travexuatban\":\"abcasdasd\",\r\n    \"travebientap\":\"wwwwwww\",\r\n    \"maloai\":\"LHD001\",\r\n    \"congkhai\":true,\r\n    \"ndtraloi\":\"da tra loi\",\r\n    \"matrangthai\":\"TT005\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://{{url}}:{{port}}/api/hoidap/hoidap-xuly",
+							"protocol": "http",
+							"host": [
+								"{{url}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"api",
+								"hoidap",
+								"hoidap-xuly"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "CauHoiTheoQuyen",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJNYU5oYW5WaWVuIjoiTlYwMDEiLCJUZW4iOiJIb8OgbmciLCJIbyI6Ik5ndXnhu4VuICIsInVuaXF1ZV9uYW1lIjoiTmd1eeG7hW4gSG_DoG5nIiwiRW1haWwiOiJIb2FuZ0BnbWFpbC5jb20iLCJVc2VyTmFtZSI6ImJpZW50YXAiLCJqdGkiOiJiYzhkNDk0ZS1mMjJiLTQxYWQtYjY5Ny0zM2VjNWVmZGQwMjgiLCJyb2xlIjoiQmnDqm4gdOG6rXAiLCJuYmYiOjE2MjQ5Mzk0NjEsImV4cCI6MTY1NjQ3NTQ2MSwiaWF0IjoxNjI0OTM5NDYxfQ.BIiza40_-GUo0M9wjUqILvPRP-NNz4Ikfjf8_jFpDAc",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"pagenumber\":1,\r\n    \"pagesize\":15,\r\n    \"tenquyen\":[\r\n        \"Biên tập\"\r\n    ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://{{url}}:{{port}}/api/hoidap/hoidap-quyen",
+							"protocol": "http",
+							"host": [
+								"{{url}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"api",
+								"hoidap",
+								"hoidap-quyen"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "TrangThaiTheoQuyen",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJNYU5oYW5WaWVuIjoiTlYwMDEiLCJUZW4iOiJIb8OgbmciLCJIbyI6Ik5ndXnhu4VuICIsInVuaXF1ZV9uYW1lIjoiTmd1eeG7hW4gSG_DoG5nIiwiRW1haWwiOiJIb2FuZ0BnbWFpbC5jb20iLCJVc2VyTmFtZSI6ImhvYW5nZHoiLCJqdGkiOiJhYmU5NDUwMC1mMzQwLTRhYzYtODNkOC02YTU3ZmUwMDlkZjgiLCJyb2xlIjoiQmnDqm4gdOG6rXAiLCJuYmYiOjE2MjQ4OTcyODgsImV4cCI6MTY1NjQzMzI4OCwiaWF0IjoxNjI0ODk3Mjg4fQ.I9IW-YEB7R6fjbjGjrpv1ub1AtxqY2gbshykgBbWHFM",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"tenquyen\":[\r\n        \"Biên tập\",\r\n        \"Duyệt\",\r\n        \"Xuất bản\"\r\n    ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://{{url}}:{{port}}/api/hoidap/trangthai-quyen",
+							"protocol": "http",
+							"host": [
+								"{{url}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"api",
+								"hoidap",
+								"trangthai-quyen"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "TimKiemCauHoiTheoTrangThai",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJNYU5oYW5WaWVuIjoiTlYwMDEiLCJUZW4iOiJIb8OgbmciLCJIbyI6Ik5ndXnhu4VuICIsInVuaXF1ZV9uYW1lIjoiTmd1eeG7hW4gSG_DoG5nIiwiRW1haWwiOiJIb2FuZ0BnbWFpbC5jb20iLCJVc2VyTmFtZSI6ImJpZW50YXAiLCJqdGkiOiJiYzhkNDk0ZS1mMjJiLTQxYWQtYjY5Ny0zM2VjNWVmZGQwMjgiLCJyb2xlIjoiQmnDqm4gdOG6rXAiLCJuYmYiOjE2MjQ5Mzk0NjEsImV4cCI6MTY1NjQ3NTQ2MSwiaWF0IjoxNjI0OTM5NDYxfQ.BIiza40_-GUo0M9wjUqILvPRP-NNz4Ikfjf8_jFpDAc",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://{{url}}:{{port}}/api/hoidap/hoidap-trangthai?matrangthai=TT005&pagenumber=1&pagesize=20",
+							"protocol": "http",
+							"host": [
+								"{{url}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"api",
+								"hoidap",
+								"hoidap-trangthai"
+							],
+							"query": [
+								{
+									"key": "matrangthai",
+									"value": "TT005"
+								},
+								{
+									"key": "pagenumber",
+									"value": "1"
+								},
+								{
+									"key": "pagesize",
+									"value": "20"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "TimKiemCauHoiTheoMaCauHoi",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJNYU5oYW5WaWVuIjoiTlYwMDEiLCJUZW4iOiJIb8OgbmciLCJIbyI6Ik5ndXnhu4VuICIsInVuaXF1ZV9uYW1lIjoiTmd1eeG7hW4gSG_DoG5nIiwiRW1haWwiOiJIb2FuZ0BnbWFpbC5jb20iLCJVc2VyTmFtZSI6ImJpZW50YXAiLCJqdGkiOiIxOWQwMWUyNC1iNDcyLTQ5N2MtODg4My1hNDVlNTNhZTIyNWUiLCJyb2xlIjoiQmnDqm4gdOG6rXAiLCJuYmYiOjE2MjQ5NzM5NTUsImV4cCI6MTY1NjUwOTk1NSwiaWF0IjoxNjI0OTczOTU1fQ.f85YU2Ix-RkoxZF-RBfpZ8D9INNI77x5k4CGFuHD-Qo",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://{{url}}:{{port}}/api/hoidap/hoidap-mahoidap?mahoidap=HD0_00000011",
+							"protocol": "http",
+							"host": [
+								"{{url}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"api",
+								"hoidap",
+								"hoidap-mahoidap"
+							],
+							"query": [
+								{
+									"key": "mahoidap",
+									"value": "HD0_00000011"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "TimKiemCauHoiTheoMaLoaiCauHoi",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJNYU5oYW5WaWVuIjoiS0gwMDIiLCJUZW4iOiJExrDGoW5nIiwiSG8iOiJCw7lpIFbEg24iLCJ1bmlxdWVfbmFtZSI6IkLDuWkgVsSDbkTGsMahbmciLCJFbWFpbCI6IkR1b25nQGdtYWlsLmNvbSIsIlVzZXJOYW1lIjoiZHVvbmd0c25jMSIsInJvbGUiOiJLaMOhY2ggaMOgbmciLCJqdGkiOiJlMTEzZTMzNC1hYTJiLTRiMzMtODRmMy1jN2IxYjdhNWI2MTUiLCJuYmYiOjE2MjUwNTYyMjgsImV4cCI6MTY1NjU5MjIyOCwiaWF0IjoxNjI1MDU2MjI4fQ.hTTFl4FtChxSXAV0mWU-3gOyCdn0YQQL9SMpZyHIBJA",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://{{url}}:{{port}}/api/hoidap/hoidap-maloaihoidap?maloaihoidap=LHD001",
+							"protocol": "http",
+							"host": [
+								"{{url}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"api",
+								"hoidap",
+								"hoidap-maloaihoidap"
+							],
+							"query": [
+								{
+									"key": "maloaihoidap",
+									"value": "LHD001"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "TimKiemCauHoiTheoMaKhachHang",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJNYU5oYW5WaWVuIjoiS0gwMDIiLCJUZW4iOiJExrDGoW5nIiwiSG8iOiJCw7lpIFbEg24iLCJ1bmlxdWVfbmFtZSI6IkLDuWkgVsSDbkTGsMahbmciLCJFbWFpbCI6IkR1b25nQGdtYWlsLmNvbSIsIlVzZXJOYW1lIjoiZHVvbmd0c25jMSIsInJvbGUiOiJLaMOhY2ggaMOgbmciLCJqdGkiOiJlMTEzZTMzNC1hYTJiLTRiMzMtODRmMy1jN2IxYjdhNWI2MTUiLCJuYmYiOjE2MjUwNTYyMjgsImV4cCI6MTY1NjU5MjIyOCwiaWF0IjoxNjI1MDU2MjI4fQ.hTTFl4FtChxSXAV0mWU-3gOyCdn0YQQL9SMpZyHIBJA",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://{{url}}:{{port}}/api/hoidap/hoidap-makhachhang?makhachhang=KH002",
+							"protocol": "http",
+							"host": [
+								"{{url}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"api",
+								"hoidap",
+								"hoidap-makhachhang"
+							],
+							"query": [
+								{
+									"key": "makhachhang",
+									"value": "KH002"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "TimKiemCauHoiMaSanPhamMaLoaiHoiDap",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJNYU5oYW5WaWVuIjoiS0gwMDIiLCJUZW4iOiJExrDGoW5nIiwiSG8iOiJCw7lpIFbEg24iLCJ1bmlxdWVfbmFtZSI6IkLDuWkgVsSDbkTGsMahbmciLCJFbWFpbCI6IkR1b25nQGdtYWlsLmNvbSIsIlVzZXJOYW1lIjoiZHVvbmd0c25jMSIsInJvbGUiOiJLaMOhY2ggaMOgbmciLCJqdGkiOiJlOTY3ZGQ4YS0wMDdlLTQ2ZmMtODJkOS03ZmU2YTMxZmQ2MTQiLCJuYmYiOjE2MjUxMDQyNzUsImV4cCI6MTY1NjY0MDI3NSwiaWF0IjoxNjI1MTA0Mjc1fQ.hV6xvqmr6MzRdVfyKVKTFupW09dMuzjyYN4cUkA4NJM",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://{{url}}:{{port}}/api/hoidap/hoidap-masanpham-maloaihoidap?masanpham=SP001&maloaihoidap=LHD001&pagenumber=1&pagesize=5",
+							"protocol": "http",
+							"host": [
+								"{{url}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"api",
+								"hoidap",
+								"hoidap-masanpham-maloaihoidap"
+							],
+							"query": [
+								{
+									"key": "masanpham",
+									"value": "SP001"
+								},
+								{
+									"key": "maloaihoidap",
+									"value": "LHD001"
+								},
+								{
+									"key": "pagenumber",
+									"value": "1"
+								},
+								{
+									"key": "pagesize",
+									"value": "5"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "TimKiemCauHoiMaSanPham",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJNYU5oYW5WaWVuIjoiS0gwMDIiLCJUZW4iOiJExrDGoW5nIiwiSG8iOiJCw7lpIFbEg24iLCJ1bmlxdWVfbmFtZSI6IkLDuWkgVsSDbkTGsMahbmciLCJFbWFpbCI6IkR1b25nQGdtYWlsLmNvbSIsIlVzZXJOYW1lIjoiZHVvbmd0c25jMSIsInJvbGUiOiJLaMOhY2ggaMOgbmciLCJqdGkiOiJlOTY3ZGQ4YS0wMDdlLTQ2ZmMtODJkOS03ZmU2YTMxZmQ2MTQiLCJuYmYiOjE2MjUxMDQyNzUsImV4cCI6MTY1NjY0MDI3NSwiaWF0IjoxNjI1MTA0Mjc1fQ.hV6xvqmr6MzRdVfyKVKTFupW09dMuzjyYN4cUkA4NJM",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://{{url}}:{{port}}/api/hoidap/hoidap-masanpham?masanpham=SP001&pagenumber=1&pagesize=3",
+							"protocol": "http",
+							"host": [
+								"{{url}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"api",
+								"hoidap",
+								"hoidap-masanpham"
+							],
+							"query": [
+								{
+									"key": "masanpham",
+									"value": "SP001"
+								},
+								{
+									"key": "pagenumber",
+									"value": "1"
+								},
+								{
+									"key": "pagesize",
+									"value": "3"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "TimKiemCauHoiTieuDe",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJNYU5oYW5WaWVuIjoiS0gwMDIiLCJUZW4iOiJExrDGoW5nIiwiSG8iOiJCw7lpIFbEg24iLCJ1bmlxdWVfbmFtZSI6IkLDuWkgVsSDbkTGsMahbmciLCJFbWFpbCI6IkR1b25nQGdtYWlsLmNvbSIsIlVzZXJOYW1lIjoiZHVvbmd0c25jMSIsInJvbGUiOiJLaMOhY2ggaMOgbmciLCJqdGkiOiJlOTY3ZGQ4YS0wMDdlLTQ2ZmMtODJkOS03ZmU2YTMxZmQ2MTQiLCJuYmYiOjE2MjUxMDQyNzUsImV4cCI6MTY1NjY0MDI3NSwiaWF0IjoxNjI1MTA0Mjc1fQ.hV6xvqmr6MzRdVfyKVKTFupW09dMuzjyYN4cUkA4NJM",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://{{url}}:{{port}}/api/hoidap/hoidap-tieude?tieude=Thanh&pagenumber=2&pagesize=1",
+							"protocol": "http",
+							"host": [
+								"{{url}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"api",
+								"hoidap",
+								"hoidap-tieude"
+							],
+							"query": [
+								{
+									"key": "tieude",
+									"value": "Thanh"
+								},
+								{
+									"key": "pagenumber",
+									"value": "2"
+								},
+								{
+									"key": "pagesize",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "TimKiemMaSanPhamMaHoiDap",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJNYU5oYW5WaWVuIjoiS0gwMDIiLCJUZW4iOiJExrDGoW5nIiwiSG8iOiJCw7lpIFbEg24iLCJ1bmlxdWVfbmFtZSI6IkLDuWkgVsSDbiBExrDGoW5nIiwiRW1haWwiOiJjdW9uZ210YXZpZXRuYW1AZ21haWwuY29tIiwiVXNlck5hbWUiOiJkdW9uZ3RzbmMxIiwicm9sZSI6Iktow6FjaCBow6BuZyIsImp0aSI6ImEzNzU2Y2E3LWZlNmItNDZhZC05MzY1LWVmZmY5MzhjMzRhMSIsIm5iZiI6MTYyNjAyMjQzNywiZXhwIjoxNjU3NTU4NDM3LCJpYXQiOjE2MjYwMjI0Mzd9.QBp4WHBEgs8fs07lsS0AbgB-pONQ7-j3sGgETfJORz0",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://{{url}}:{{port}}/api/hoidap/masanpham?mahoidap=HD0_00000006",
+							"protocol": "http",
+							"host": [
+								"{{url}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"api",
+								"hoidap",
+								"masanpham"
+							],
+							"query": [
+								{
+									"key": "mahoidap",
+									"value": "HD0_00000006"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "KhachHang",
+			"item": [
+				{
+					"name": "LoginClient",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\":\"duongtsnc1\",\r\n    \"password\":\"123456\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://{{url}}:{{port}}/api/khachhang/login",
+							"protocol": "http",
+							"host": [
+								"{{url}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"api",
+								"khachhang",
+								"login"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "SanPham",
+			"item": [
+				{
+					"name": "HienThiTatCaSanPham",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJNYU5oYW5WaWVuIjoiS0gwMDIiLCJUZW4iOiJExrDGoW5nIiwiSG8iOiJCw7lpIFbEg24iLCJ1bmlxdWVfbmFtZSI6IkLDuWkgVsSDbkTGsMahbmciLCJFbWFpbCI6IkR1b25nQGdtYWlsLmNvbSIsIlVzZXJOYW1lIjoiZHVvbmd0c25jMSIsInJvbGUiOiJLaMOhY2ggaMOgbmciLCJqdGkiOiI5YWE2MGJiMy1jNGVkLTQ2ZDItYTA3OC04MjZjNjY2YzIzNjAiLCJuYmYiOjE2MjQ4OTQyNjYsImV4cCI6MTY1NjQzMDI2NiwiaWF0IjoxNjI0ODk0MjY2fQ.KJQqqfGb_W4fdwoCalc4JDx2-QHpURBjXJ3yFOHwOPc",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://{{url}}:{{port}}/api/sanpham",
+							"protocol": "http",
+							"host": [
+								"{{url}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"api",
+								"sanpham"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "SearchSanPhamTheoMaSanPham",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJNYU5oYW5WaWVuIjoiS0gwMDIiLCJUZW4iOiJExrDGoW5nIiwiSG8iOiJCw7lpIFbEg24iLCJ1bmlxdWVfbmFtZSI6IkLDuWkgVsSDbkTGsMahbmciLCJFbWFpbCI6IkR1b25nQGdtYWlsLmNvbSIsIlVzZXJOYW1lIjoiZHVvbmd0c25jMSIsInJvbGUiOiJLaMOhY2ggaMOgbmciLCJqdGkiOiI2MjAzZGE3Zi00OGY2LTQ2MTEtOTRhMC0wMjg2YjE2ZGNkMmYiLCJuYmYiOjE2MjQ4OTQzNjEsImV4cCI6MTY1NjQzMDM2MSwiaWF0IjoxNjI0ODk0MzYxfQ.T51AufpX6KF7NoCcVL99mBJZebJgKQ7MoVZH_SBLSM0",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://{{url}}:{{port}}/api/sanpham/masanpham?masanpham=SP001",
+							"protocol": "http",
+							"host": [
+								"{{url}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"api",
+								"sanpham",
+								"masanpham"
+							],
+							"query": [
+								{
+									"key": "masanpham",
+									"value": "SP001"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "TaiLieu",
+			"item": [
+				{
+					"name": "Them_TaiLieu",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJNYU5oYW5WaWVuIjoiTlYwMDEiLCJUZW4iOiJIb8OgbmciLCJIbyI6Ik5ndXnhu4VuICIsInVuaXF1ZV9uYW1lIjoiTmd1eeG7hW4gSG_DoG5nIiwiRW1haWwiOiJIb2FuZ0BnbWFpbC5jb20iLCJVc2VyTmFtZSI6ImhvYW5nZHoiLCJqdGkiOiI2ZGMxMTc3ZS1lZTA4LTQ5YzctOTM5NS1lMzE1OWZhZGNjZDYiLCJyb2xlIjpbIkJpw6puIHThuq1wIiwiQWRtaW4iXSwibmJmIjoxNjI0NTQ4NTEwLCJleHAiOjE2NTYwODQ1MTAsImlhdCI6MTYyNDU0ODUxMH0.vZRXKVBGBu7qTyyTmsBxSin3XkvbQEUG04OqjU5HHFU",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"tentailieu\":\"Sửa lỗi\",\r\n    \"mota\":\"Phương pháp fix các lỗi thông thường\",\r\n    \"tenfile\":\"Content3_74fc.pdf\",\r\n    \"duongdan\":\"Content3_74fc.pdf\",\r\n    \"maloaitailieu\":\"LTL001\",\r\n    \"masanpham\":\"SP001\",\r\n    \"manhanvien\":\"NV001\",\r\n    \"ngaythang\":\"10-07-2021\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://{{url}}:{{port}}/api/tailieu",
+							"protocol": "http",
+							"host": [
+								"{{url}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"api",
+								"tailieu"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "TimKiem_TaiLieu_SanPham",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJNYU5oYW5WaWVuIjoiS0gwMDIiLCJUZW4iOiJExrDGoW5nIiwiSG8iOiJCw7lpIFbEg24iLCJ1bmlxdWVfbmFtZSI6IkLDuWkgVsSDbkTGsMahbmciLCJFbWFpbCI6IkR1b25nQGdtYWlsLmNvbSIsIlVzZXJOYW1lIjoiZHVvbmd0c25jMSIsInJvbGUiOiJLaMOhY2ggaMOgbmciLCJqdGkiOiIzYjhkYWUxMC1kY2ZmLTQ0OWUtYTg2YS0wMTA5NTI3Mjg1MTQiLCJuYmYiOjE2MjQ1NDU1NzUsImV4cCI6MTY1NjA4MTU3NSwiaWF0IjoxNjI0NTQ1NTc1fQ.z-HfBIUvPdOelXhN4Nf_z8SIs20Ql1Kt4CYzISzlHso",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://{{url}}:{{port}}/api/tailieu/sanpham?masanpham=SP001&maloaitailieu=LTL001",
+							"protocol": "http",
+							"host": [
+								"{{url}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"api",
+								"tailieu",
+								"sanpham"
+							],
+							"query": [
+								{
+									"key": "masanpham",
+									"value": "SP001"
+								},
+								{
+									"key": "maloaitailieu",
+									"value": "LTL001"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getURL",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://{{url}}:{{port}}/api/tailieu/url?tenfile=abc.txt",
+							"protocol": "http",
+							"host": [
+								"{{url}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"api",
+								"tailieu",
+								"url"
+							],
+							"query": [
+								{
+									"key": "tenfile",
+									"value": "abc.txt"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ThongBaoTheoTrangThai",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJNYU5oYW5WaWVuIjoiTlYwMDEiLCJUZW4iOiJIb8OgbmciLCJIbyI6Ik5ndXnhu4VuICIsInVuaXF1ZV9uYW1lIjoiTmd1eeG7hW4gSG_DoG5nIiwiRW1haWwiOiJIb2FuZ0BnbWFpbC5jb20iLCJVc2VyTmFtZSI6ImhvYW5nZHoiLCJqdGkiOiIzYjEzODlkYi03NzY2LTQxM2YtOGYyMy0zYTU2NTVlZDUyYTUiLCJyb2xlIjoiQmnDqm4gdOG6rXAiLCJuYmYiOjE2MjQzODc3MDYsImV4cCI6MTY1NTkyMzcwNiwiaWF0IjoxNjI0Mzg3NzA2fQ.4DfT1FUAtBaZOPre9voSoUaR8rM_pyjzF5Rsdtnr1tY",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://{{url}}:{{port}}/api/tailieu/tentrangthai?maTrangThai=TT005",
+							"protocol": "http",
+							"host": [
+								"{{url}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"api",
+								"tailieu",
+								"tentrangthai"
+							],
+							"query": [
+								{
+									"key": "maTrangThai",
+									"value": "TT005"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DuyetTaiLieu",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJNYU5oYW5WaWVuIjoiTlYwMDIiLCJUZW4iOiJIdXkiLCJIbyI6Ik5ndXnhu4VuICIsInVuaXF1ZV9uYW1lIjoiTmd1eeG7hW4gSHV5IiwiRW1haWwiOiJIdXlAZ21haWwuY29tIiwiVXNlck5hbWUiOiJodXlkeiIsImp0aSI6IjE1NWQ3ZWU5LTMwY2UtNDhhMC04NzQ1LWIxYzVhYjIyOWJlMCIsInJvbGUiOiJEdXnhu4d0IiwibmJmIjoxNjI0NTQzMTk1LCJleHAiOjE2NTYwNzkxOTUsImlhdCI6MTYyNDU0MzE5NX0.h2OBSK9Z-vdzYjTDGTxLqcW6DDxAIO4AZ3JYtHJL1ns",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"matailieu\":\"TL000006\",\r\n    \"manhanvien\":\"NV002\",\r\n    \"ngaythang\":\"22-05-2021\",\r\n    \"download\":\"false\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://{{url}}:{{port}}/api/tailieu/duyet",
+							"protocol": "http",
+							"host": [
+								"{{url}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"api",
+								"tailieu",
+								"duyet"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "TraVeTaiLieu",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"matailieu\":\"TL000006\",\r\n    \"manhanvien\":\"NV002\",\r\n    \"ngaythang\":\"22-05-2021\",\r\n    \"lydotrave\":\"Tài liệu quá dài\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://{{url}}:{{port}}/api/tailieu/trave",
+							"protocol": "http",
+							"host": [
+								"{{url}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"api",
+								"tailieu",
+								"trave"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GuiDuyetTaiLieu",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"matailieu\":\"TL000006\",\r\n    \"manhanvien\":\"NV002\",\r\n    \"ngaythang\":\"22-05-2021\",\r\n    \"tentailieu\":\"bùi thanh hoàng\",\r\n    \"mota\":\"đây là sản phẩm ...\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://{{url}}:{{port}}/api/tailieu/guiduyet",
+							"protocol": "http",
+							"host": [
+								"{{url}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"api",
+								"tailieu",
+								"guiduyet"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "XuatBanTaiLieu",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"matailieu\":\"TL000006\",\r\n    \"manhanvien\":\"NV002\",\r\n    \"ngaythang\":\"22-05-2021\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://{{url}}:{{port}}/api/tailieu/xuatban",
+							"protocol": "http",
+							"host": [
+								"{{url}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"api",
+								"tailieu",
+								"xuatban"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "HuyTaiLieu",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJNYU5oYW5WaWVuIjoiTlYwMDEiLCJUZW4iOiJIb8OgbmciLCJIbyI6Ik5ndXnhu4VuICIsInVuaXF1ZV9uYW1lIjoiTmd1eeG7hW4gSG_DoG5nIiwiRW1haWwiOiJIb2FuZ0BnbWFpbC5jb20iLCJVc2VyTmFtZSI6ImhvYW5nZHoiLCJqdGkiOiJiZWFhODU0NS0zYTc2LTRlYWEtOTczYS1hOWE1MTY2NTVkOTciLCJyb2xlIjpbIkJpw6puIHThuq1wIiwiQWRtaW4iXSwibmJmIjoxNjI0NjA2MTMyLCJleHAiOjE2NTYxNDIxMzIsImlhdCI6MTYyNDYwNjEzMn0.950DrgxPgeB8gG2cnkC2C0n3Mxa83b8rPcgkjffFUL4",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"matailieu\":\"TL000020\",\r\n    \"manhanvien\":\"NV002\",\r\n    \"ngaythang\":\"22-05-2021\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://{{url}}:{{port}}/api/tailieu/huy",
+							"protocol": "http",
+							"host": [
+								"{{url}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"api",
+								"tailieu",
+								"huy"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ThuHoiTaiLieu",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"matailieu\":\"TL000020\",\r\n    \"manhanvien\":\"NV002\",\r\n    \"ngaythang\":\"22-05-2021\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://{{url}}:{{port}}/api/tailieu/thuhoi",
+							"protocol": "http",
+							"host": [
+								"{{url}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"api",
+								"tailieu",
+								"thuhoi"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "TimKiem_TaiLieu_MaTaiLieu",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJNYU5oYW5WaWVuIjoiS0gwMDIiLCJUZW4iOiJExrDGoW5nIiwiSG8iOiJCw7lpIFbEg24iLCJ1bmlxdWVfbmFtZSI6IkLDuWkgVsSDbkTGsMahbmciLCJFbWFpbCI6IkR1b25nQGdtYWlsLmNvbSIsIlVzZXJOYW1lIjoiZHVvbmd0c25jMSIsInJvbGUiOiJLaMOhY2ggaMOgbmciLCJqdGkiOiI0OWZkMTliNy1iYWEzLTQ2YzEtYmM4My1kOTgyMzFlZWEwMGIiLCJuYmYiOjE2MjQ1ODQ5MjcsImV4cCI6MTY1NjEyMDkyNywiaWF0IjoxNjI0NTg0OTI3fQ.6ET1wixV5liiJLO9uVdWI58Hur935ottRP0F_oNffMM",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://{{url}}:{{port}}/api/tailieu/matailieu/?matailieu=TL000007",
+							"protocol": "http",
+							"host": [
+								"{{url}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"api",
+								"tailieu",
+								"matailieu",
+								""
+							],
+							"query": [
+								{
+									"key": "matailieu",
+									"value": "TL000007"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "HienThiSanPham",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJNYU5oYW5WaWVuIjoiTlYwMDEiLCJUZW4iOiJIb8OgbmciLCJIbyI6Ik5ndXnhu4VuICIsInVuaXF1ZV9uYW1lIjoiTmd1eeG7hW4gSG_DoG5nIiwiRW1haWwiOiJIb2FuZ0BnbWFpbC5jb20iLCJVc2VyTmFtZSI6ImhvYW5nZHoiLCJqdGkiOiJhYmI4YjRkMi1hZTk4LTRmMDctODYxNy1lMWY2NDkwNjk4NWUiLCJyb2xlIjpbIkJpw6puIHThuq1wIiwiQWRtaW4iXSwibmJmIjoxNjI0ODcwNDUyLCJleHAiOjE2NTY0MDY0NTIsImlhdCI6MTYyNDg3MDQ1Mn0.QJsbdVOykwzUCs2YSvL1JVibIwK5tVeTvQpy4HP3mVc",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://{{url}}:{{port}}/api/tailieu/spham",
+							"protocol": "http",
+							"host": [
+								"{{url}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"api",
+								"tailieu",
+								"spham"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "HienThiLoaiTaiLieu",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJNYU5oYW5WaWVuIjoiTlYwMDEiLCJUZW4iOiJIb8OgbmciLCJIbyI6Ik5ndXnhu4VuICIsInVuaXF1ZV9uYW1lIjoiTmd1eeG7hW4gSG_DoG5nIiwiRW1haWwiOiJIb2FuZ0BnbWFpbC5jb20iLCJVc2VyTmFtZSI6ImhvYW5nZHoiLCJqdGkiOiJhYmI4YjRkMi1hZTk4LTRmMDctODYxNy1lMWY2NDkwNjk4NWUiLCJyb2xlIjpbIkJpw6puIHThuq1wIiwiQWRtaW4iXSwibmJmIjoxNjI0ODcwNDUyLCJleHAiOjE2NTY0MDY0NTIsImlhdCI6MTYyNDg3MDQ1Mn0.QJsbdVOykwzUCs2YSvL1JVibIwK5tVeTvQpy4HP3mVc",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://{{url}}:{{port}}/api/tailieu/ltailieu",
+							"protocol": "http",
+							"host": [
+								"{{url}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"api",
+								"tailieu",
+								"ltailieu"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Test_SanPhamTheoKhachHang",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJNYU5oYW5WaWVuIjoiS0gwMDIiLCJUZW4iOiJExrDGoW5nIiwiSG8iOiJCw7lpIFbEg24iLCJ1bmlxdWVfbmFtZSI6IkLDuWkgVsSDbkTGsMahbmciLCJFbWFpbCI6IkR1b25nQGdtYWlsLmNvbSIsIlVzZXJOYW1lIjoiZHVvbmd0c25jMSIsInJvbGUiOiJLaMOhY2ggaMOgbmciLCJqdGkiOiI0OWZkMTliNy1iYWEzLTQ2YzEtYmM4My1kOTgyMzFlZWEwMGIiLCJuYmYiOjE2MjQ1ODQ5MjcsImV4cCI6MTY1NjEyMDkyNywiaWF0IjoxNjI0NTg0OTI3fQ.6ET1wixV5liiJLO9uVdWI58Hur935ottRP0F_oNffMM",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://{{url}}:{{port}}/api/tailieu/khachhang-sanpham?makhachhang=KH001",
+							"protocol": "http",
+							"host": [
+								"{{url}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"api",
+								"tailieu",
+								"khachhang-sanpham"
+							],
+							"query": [
+								{
+									"key": "makhachhang",
+									"value": "KH001"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "TrangThaiTheoQuyen",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJNYU5oYW5WaWVuIjoiTlYwMDIiLCJUZW4iOiJIdXkiLCJIbyI6Ik5ndXnhu4VuICIsInVuaXF1ZV9uYW1lIjoiTmd1eeG7hW4gSHV5IiwiRW1haWwiOiJIdXlAZ21haWwuY29tIiwiVXNlck5hbWUiOiJodXlkeiIsImp0aSI6IjE0MmVkMDMxLWFkMDgtNGM5NS1iMjYxLTdkNWNiMWFlZWRlOCIsInJvbGUiOiJBZG1pbiIsIm5iZiI6MTYyNDc2NTYzMiwiZXhwIjoxNjU2MzAxNjMyLCJpYXQiOjE2MjQ3NjU2MzJ9.Vqxk_T5nhwro4GrNMUy5TvH3bitUkHRvE7T-afs1swA",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"tenquyen\":[\r\n        \"Biên tập\",\r\n        \"Duyệt\",\r\n        \"Xuất bản\"\r\n    ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://{{url}}:{{port}}/api/tailieu/trangthai-quyen",
+							"protocol": "http",
+							"host": [
+								"{{url}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"api",
+								"tailieu",
+								"trangthai-quyen"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "TaiLieuTheoQuyen",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJNYU5oYW5WaWVuIjoiTlYwMDEiLCJUZW4iOiJIb8OgbmciLCJIbyI6Ik5ndXnhu4VuICIsInVuaXF1ZV9uYW1lIjoiTmd1eeG7hW4gSG_DoG5nIiwiRW1haWwiOiJIb2FuZ0BnbWFpbC5jb20iLCJVc2VyTmFtZSI6ImJpZW50YXAiLCJqdGkiOiIxOWQwMWUyNC1iNDcyLTQ5N2MtODg4My1hNDVlNTNhZTIyNWUiLCJyb2xlIjoiQmnDqm4gdOG6rXAiLCJuYmYiOjE2MjQ5NzM5NTUsImV4cCI6MTY1NjUwOTk1NSwiaWF0IjoxNjI0OTczOTU1fQ.f85YU2Ix-RkoxZF-RBfpZ8D9INNI77x5k4CGFuHD-Qo",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"pagenumber\":1,\r\n    \"pagesize\":100,\r\n    \"tenquyen\":[\r\n        \"Biên tập\"\r\n    ]\r\n}\r\n\r\n\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://{{url}}:{{port}}/api/tailieu/tailieu-quyen",
+							"protocol": "http",
+							"host": [
+								"{{url}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"api",
+								"tailieu",
+								"tailieu-quyen"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "TimKiemTaiLieuTheoTrangThai",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJNYU5oYW5WaWVuIjoiTlYwMDQiLCJUZW4iOiIgQW5oIiwiSG8iOiJExrDGoW5nIMSQ4bupYyIsInVuaXF1ZV9uYW1lIjoiRMawxqFuZyDEkOG7qWMgQW5oIiwiRW1haWwiOiJkdWNBbmhAZ21haWwuY29tIiwiVXNlck5hbWUiOiJhZG1pbiIsImp0aSI6IjBkYmU2NWM3LTFmZDQtNDNlYi1hOGI5LTE5OTNiMTJkNGU5OSIsInJvbGUiOiJBZG1pbiIsIm5iZiI6MTYyNDk1NjQ1MCwiZXhwIjoxNjU2NDkyNDUwLCJpYXQiOjE2MjQ5NTY0NTB9.rIpHruDRhIMYfh9dQKczEZC3xirS42HkYORVwELxhlw",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://{{url}}:{{port}}/api/tailieu/tailieu-trangthai?matrangthai=TT005&pagenumber=1&pagesize=20",
+							"protocol": "http",
+							"host": [
+								"{{url}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"api",
+								"tailieu",
+								"tailieu-trangthai"
+							],
+							"query": [
+								{
+									"key": "matrangthai",
+									"value": "TT005"
+								},
+								{
+									"key": "pagenumber",
+									"value": "1"
+								},
+								{
+									"key": "pagesize",
+									"value": "20"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ListLinkDownload",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJNYU5oYW5WaWVuIjoiS0gwMDIiLCJUZW4iOiJExrDGoW5nIiwiSG8iOiJCw7lpIFbEg24iLCJ1bmlxdWVfbmFtZSI6IkLDuWkgVsSDbkTGsMahbmciLCJFbWFpbCI6ImN1b25nbXRhdmlldG5hbUBnbWFpbC5jb20iLCJVc2VyTmFtZSI6ImR1b25ndHNuYzEiLCJyb2xlIjoiS2jDoWNoIGjDoG5nIiwianRpIjoiODY3NjA4ZTktOWMyNC00YTUzLThhZGYtNThlYzcxYmZhM2FhIiwibmJmIjoxNjI1OTI2MTE1LCJleHAiOjE2NTc0NjIxMTUsImlhdCI6MTYyNTkyNjExNX0.Sxg794nQ9r7RqTR49C0l1BirwXPUCdRl-u-DP2NvcLE",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://{{url}}:{{port}}/api/tailieu/listlink?masanpham=SP001",
+							"protocol": "http",
+							"host": [
+								"{{url}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"api",
+								"tailieu",
+								"listlink"
+							],
+							"query": [
+								{
+									"key": "masanpham",
+									"value": "SP001"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "NhanVien",
+			"item": [
+				{
+					"name": "DanhSachNhanVien",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJNYU5oYW5WaWVuIjoiTlYwMDQiLCJUZW4iOiIgQW5oIiwiSG8iOiJExrDGoW5nIMSQ4bupYyIsInVuaXF1ZV9uYW1lIjoiRMawxqFuZyDEkOG7qWMgQW5oIiwiRW1haWwiOiJkdWNBbmhAZ21haWwuY29tIiwiVXNlck5hbWUiOiJkdWNhbmgiLCJqdGkiOiIwZTY3Y2ZjNy0wMTRjLTRkZjAtOGE4Mi1mNzYyODk5OGU3YjEiLCJyb2xlIjoiQWRtaW4iLCJuYmYiOjE2MjQ2Mzc1NzAsImV4cCI6MTY1NjE3MzU3MCwiaWF0IjoxNjI0NjM3NTcwfQ.uwTS0MKMl9gjXFi2TrF1nJrR280IOc8MTNEDtoCvAPA",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://{{url}}:{{port}}/api/nhanvien/danhsach?pagenumber=1&pagesize=2",
+							"protocol": "http",
+							"host": [
+								"{{url}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"api",
+								"nhanvien",
+								"danhsach"
+							],
+							"query": [
+								{
+									"key": "pagenumber",
+									"value": "1"
+								},
+								{
+									"key": "pagesize",
+									"value": "2"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DanhSachQuyenTheoNhanVien",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJNYU5oYW5WaWVuIjoiTlYwMDQiLCJUZW4iOiIgQW5oIiwiSG8iOiJExrDGoW5nIMSQ4bupYyIsInVuaXF1ZV9uYW1lIjoiRMawxqFuZyDEkOG7qWMgQW5oIiwiRW1haWwiOiJkdWNBbmhAZ21haWwuY29tIiwiVXNlck5hbWUiOiJkdWNhbmgiLCJqdGkiOiIwZTY3Y2ZjNy0wMTRjLTRkZjAtOGE4Mi1mNzYyODk5OGU3YjEiLCJyb2xlIjoiQWRtaW4iLCJuYmYiOjE2MjQ2Mzc1NzAsImV4cCI6MTY1NjE3MzU3MCwiaWF0IjoxNjI0NjM3NTcwfQ.uwTS0MKMl9gjXFi2TrF1nJrR280IOc8MTNEDtoCvAPA",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://{{url}}:{{port}}/api/nhanvien/quyen?manhanvien=NV001",
+							"protocol": "http",
+							"host": [
+								"{{url}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"api",
+								"nhanvien",
+								"quyen"
+							],
+							"query": [
+								{
+									"key": "manhanvien",
+									"value": "NV001"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "XuLyQuyen",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJNYU5oYW5WaWVuIjoiTlYwMDQiLCJUZW4iOiIgQW5oIiwiSG8iOiJExrDGoW5nIMSQ4bupYyIsInVuaXF1ZV9uYW1lIjoiRMawxqFuZyDEkOG7qWMgQW5oIiwiRW1haWwiOiJkdWNBbmhAZ21haWwuY29tIiwiVXNlck5hbWUiOiJkdWNhbmgiLCJqdGkiOiI4YmRkYTk0Zi02YmRjLTRkNmUtYjY5My1mNGY2MGMwNTg4MWEiLCJyb2xlIjoiQWRtaW4iLCJuYmYiOjE2MjQ2NDQwMDgsImV4cCI6MTY1NjE4MDAwOCwiaWF0IjoxNjI0NjQ0MDA4fQ.y7SsPlHQlFXxKTx_GLdLJFRhVwD8kEmHm7uhg9XpP7E",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"manhanvien\":\"NV002\",\r\n    \"maquyen\":\"Q001\",\r\n    \"trangthai\":\"false\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://{{url}}:{{port}}/api/nhanvien/xulyquyen",
+							"protocol": "http",
+							"host": [
+								"{{url}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"api",
+								"nhanvien",
+								"xulyquyen"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "NhanVienQuyen",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJNYU5oYW5WaWVuIjoiTlYwMDQiLCJUZW4iOiIgQW5oIiwiSG8iOiJExrDGoW5nIMSQ4bupYyIsInVuaXF1ZV9uYW1lIjoiRMawxqFuZyDEkOG7qWMgQW5oIiwiRW1haWwiOiJkdWNBbmhAZ21haWwuY29tIiwiVXNlck5hbWUiOiJkdWNhbmgiLCJqdGkiOiIxMzcwODA0NS03NDk4LTQ3MTgtYWE3Ni0wNjQ1ZmY1MjBjMjIiLCJyb2xlIjoiQWRtaW4iLCJuYmYiOjE2MjQ2NTEwMjQsImV4cCI6MTY1NjE4NzAyNCwiaWF0IjoxNjI0NjUxMDI0fQ.ZzZ5aq0lFJkPdqP_vY2A5fxhqEn2f9OivAqAa_DfO8Y",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://{{url}}:{{port}}/api/nhanvien/nhanvienquyen?pagenumber=1&pagesize=10",
+							"protocol": "http",
+							"host": [
+								"{{url}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"api",
+								"nhanvien",
+								"nhanvienquyen"
+							],
+							"query": [
+								{
+									"key": "pagenumber",
+									"value": "1"
+								},
+								{
+									"key": "pagesize",
+									"value": "10"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DanhSachNhanVienTheoMaNhanVien",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJNYU5oYW5WaWVuIjoiTlYwMDQiLCJUZW4iOiIgQW5oIiwiSG8iOiJExrDGoW5nIMSQ4bupYyIsInVuaXF1ZV9uYW1lIjoiRMawxqFuZyDEkOG7qWMgQW5oIiwiRW1haWwiOiJkdWNBbmhAZ21haWwuY29tIiwiVXNlck5hbWUiOiJkdWNhbmgiLCJqdGkiOiIxMzcwODA0NS03NDk4LTQ3MTgtYWE3Ni0wNjQ1ZmY1MjBjMjIiLCJyb2xlIjoiQWRtaW4iLCJuYmYiOjE2MjQ2NTEwMjQsImV4cCI6MTY1NjE4NzAyNCwiaWF0IjoxNjI0NjUxMDI0fQ.ZzZ5aq0lFJkPdqP_vY2A5fxhqEn2f9OivAqAa_DfO8Y",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://{{url}}:{{port}}/api/nhanvien/danhsach-manhanvien?manhanvien=NV001",
+							"protocol": "http",
+							"host": [
+								"{{url}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"api",
+								"nhanvien",
+								"danhsach-manhanvien"
+							],
+							"query": [
+								{
+									"key": "manhanvien",
+									"value": "NV001"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "CapNhatQuyen",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJNYU5oYW5WaWVuIjoiTlYwMDQiLCJUZW4iOiIgQW5oIiwiSG8iOiJExrDGoW5nIMSQ4bupYyIsInVuaXF1ZV9uYW1lIjoiRMawxqFuZyDEkOG7qWMgQW5oIiwiRW1haWwiOiJkdWNBbmhAZ21haWwuY29tIiwiVXNlck5hbWUiOiJkdWNhbmgiLCJqdGkiOiIxMzcwODA0NS03NDk4LTQ3MTgtYWE3Ni0wNjQ1ZmY1MjBjMjIiLCJyb2xlIjoiQWRtaW4iLCJuYmYiOjE2MjQ2NTEwMjQsImV4cCI6MTY1NjE4NzAyNCwiaWF0IjoxNjI0NjUxMDI0fQ.ZzZ5aq0lFJkPdqP_vY2A5fxhqEn2f9OivAqAa_DfO8Y",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"manhanvien\":\"NV001\",\r\n    \"roles\":[\r\n        \"Biên tập\"\r\n    ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://{{url}}:{{port}}/api/nhanvien/capnhatquyen",
+							"protocol": "http",
+							"host": [
+								"{{url}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"api",
+								"nhanvien",
+								"capnhatquyen"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "LoaiHoiDap",
+			"item": [
+				{
+					"name": "HienThiLoaiHoiDap",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJNYU5oYW5WaWVuIjoiS0gwMDIiLCJUZW4iOiJExrDGoW5nIiwiSG8iOiJCw7lpIFbEg24iLCJ1bmlxdWVfbmFtZSI6IkLDuWkgVsSDbkTGsMahbmciLCJFbWFpbCI6IkR1b25nQGdtYWlsLmNvbSIsIlVzZXJOYW1lIjoiZHVvbmd0c25jMSIsInJvbGUiOiJLaMOhY2ggaMOgbmciLCJqdGkiOiI1MDJmZTQyNS1lYzA4LTQwNzYtOTBhYS1kYWUxYzEyNWJmNjQiLCJuYmYiOjE2MjQ5NTE2MDUsImV4cCI6MTY1NjQ4NzYwNSwiaWF0IjoxNjI0OTUxNjA1fQ.37RNJgeuPjswzhqRBPamclADbCFx8nI0LtfhLSmo29E",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://{{url}}:{{port}}/api/loaihoidap",
+							"protocol": "http",
+							"host": [
+								"{{url}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"api",
+								"loaihoidap"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "HienThiLoaiHoiDapAdmin",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJNYU5oYW5WaWVuIjoiTlYwMDQiLCJUZW4iOiIgQW5oIiwiSG8iOiJExrDGoW5nIMSQ4bupYyIsInVuaXF1ZV9uYW1lIjoiRMawxqFuZyDEkOG7qWMgQW5oIiwiRW1haWwiOiJkdWNBbmhAZ21haWwuY29tIiwiVXNlck5hbWUiOiJhZG1pbiIsImp0aSI6ImQxZmZmZWYxLTY2YmUtNGU3ZS1hN2JiLWY0ODdjNTI3MTUzMCIsInJvbGUiOiJBZG1pbiIsIm5iZiI6MTYyNDk1MTgxNCwiZXhwIjoxNjU2NDg3ODE0LCJpYXQiOjE2MjQ5NTE4MTR9.ggsBLruS8URqbq8u4s_OAOdi1g7jdv2gXpRLJZTCZuk",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://{{url}}:{{port}}/api/loaihoidap/admin?pagenumber=1&pagesize=5",
+							"protocol": "http",
+							"host": [
+								"{{url}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"api",
+								"loaihoidap",
+								"admin"
+							],
+							"query": [
+								{
+									"key": "pagenumber",
+									"value": "1"
+								},
+								{
+									"key": "pagesize",
+									"value": "5"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ThemLoaiHoiDap",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJNYU5oYW5WaWVuIjoiTlYwMDQiLCJUZW4iOiIgQW5oIiwiSG8iOiJExrDGoW5nIMSQ4bupYyIsInVuaXF1ZV9uYW1lIjoiRMawxqFuZyDEkOG7qWMgQW5oIiwiRW1haWwiOiJkdWNBbmhAZ21haWwuY29tIiwiVXNlck5hbWUiOiJhZG1pbiIsImp0aSI6ImQxZmZmZWYxLTY2YmUtNGU3ZS1hN2JiLWY0ODdjNTI3MTUzMCIsInJvbGUiOiJBZG1pbiIsIm5iZiI6MTYyNDk1MTgxNCwiZXhwIjoxNjU2NDg3ODE0LCJpYXQiOjE2MjQ5NTE4MTR9.ggsBLruS8URqbq8u4s_OAOdi1g7jdv2gXpRLJZTCZuk",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"tenloai\":\"powerpoint\",\r\n    \"trangthai\":false,\r\n    \"mota\":\"day la file word\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://{{url}}:{{port}}/api/loaihoidap",
+							"protocol": "http",
+							"host": [
+								"{{url}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"api",
+								"loaihoidap"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UpdateLoaiHoiDap",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJNYU5oYW5WaWVuIjoiTlYwMDQiLCJUZW4iOiIgQW5oIiwiSG8iOiJExrDGoW5nIMSQ4bupYyIsInVuaXF1ZV9uYW1lIjoiRMawxqFuZyDEkOG7qWMgQW5oIiwiRW1haWwiOiJkdWNBbmhAZ21haWwuY29tIiwiVXNlck5hbWUiOiJhZG1pbiIsImp0aSI6ImQxZmZmZWYxLTY2YmUtNGU3ZS1hN2JiLWY0ODdjNTI3MTUzMCIsInJvbGUiOiJBZG1pbiIsIm5iZiI6MTYyNDk1MTgxNCwiZXhwIjoxNjU2NDg3ODE0LCJpYXQiOjE2MjQ5NTE4MTR9.ggsBLruS8URqbq8u4s_OAOdi1g7jdv2gXpRLJZTCZuk",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"maloai\":\"LHD010\",\r\n    \"tenloai\":\"powerpoint\",\r\n    \"trangthai\":true,\r\n    \"mota\":\"day la file powerpoint1\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://{{url}}:{{port}}/api/loaihoidap/capnhat",
+							"protocol": "http",
+							"host": [
+								"{{url}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"api",
+								"loaihoidap",
+								"capnhat"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "TrangThaiHoiDap",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJNYU5oYW5WaWVuIjoiTlYwMDQiLCJUZW4iOiIgQW5oIiwiSG8iOiJExrDGoW5nIMSQ4bupYyIsInVuaXF1ZV9uYW1lIjoiRMawxqFuZyDEkOG7qWMgQW5oIiwiRW1haWwiOiJkdWNBbmhAZ21haWwuY29tIiwiVXNlck5hbWUiOiJhZG1pbiIsImp0aSI6ImJiYWM5MjZmLWRkMDktNGI4NS1iMGIyLTUzNTVkNTM4OWRhMCIsInJvbGUiOiJBZG1pbiIsIm5iZiI6MTYyNDk2Mjc4MSwiZXhwIjoxNjU2NDk4NzgxLCJpYXQiOjE2MjQ5NjI3ODF9.RQWFpXmJYL_HRTsqRk6Q-k0rQRlxjI7yL-T0I2XVDbE",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"maloai\":\"LHD008\",\r\n    \"trangthai\":true\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://{{url}}:{{port}}/api/loaihoidap/trangthai",
+							"protocol": "http",
+							"host": [
+								"{{url}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"api",
+								"loaihoidap",
+								"trangthai"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "MaLoaiCauHoi_TenLoaiCauHoi",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJNYU5oYW5WaWVuIjoiTlYwMDEiLCJUZW4iOiJIb8OgbmciLCJIbyI6Ik5ndXnhu4VuICIsInVuaXF1ZV9uYW1lIjoiTmd1eeG7hW4gSG_DoG5nIiwiRW1haWwiOiJIb2FuZ0BnbWFpbC5jb20iLCJVc2VyTmFtZSI6ImJpZW50YXAiLCJqdGkiOiI4MzYxYjQ4Yy02OWQwLTQzZWYtOTY5YS02NzRjOWIxZmEwODEiLCJyb2xlIjoiQmnDqm4gdOG6rXAiLCJuYmYiOjE2MjQ5ODY2NTIsImV4cCI6MTY1NjUyMjY1MiwiaWF0IjoxNjI0OTg2NjUyfQ.DKcOYSqiVKSph4dCiOiNeRF5oV33dRPcQA6aWDsNZV8",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://{{url}}:{{port}}/api/loaihoidap/loaihd-tenloaihd",
+							"protocol": "http",
+							"host": [
+								"{{url}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"api",
+								"loaihoidap",
+								"loaihd-tenloaihd"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "TimKiemLoaiHoiDapTheoMaLoaiHoiDap",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJNYU5oYW5WaWVuIjoiTlYwMDQiLCJUZW4iOiIgQW5oIiwiSG8iOiJExrDGoW5nIMSQ4bupYyIsInVuaXF1ZV9uYW1lIjoiRMawxqFuZyDEkOG7qWMgQW5oIiwiRW1haWwiOiJkdWNBbmhAZ21haWwuY29tIiwiVXNlck5hbWUiOiJhZG1pbiIsImp0aSI6IjdiYjc4MDExLTY4OWUtNDUyMS04MmFmLTc4MzZmZWYwYzUzMSIsInJvbGUiOiJBZG1pbiIsIm5iZiI6MTYyNTEwNjc2MywiZXhwIjoxNjU2NjQyNzYzLCJpYXQiOjE2MjUxMDY3NjN9.5gjR-DDqaEV9y9sBaLD4EKj6hTXIqLAWKxUqtLsoZlQ",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://{{url}}:{{port}}/api/loaihoidap/loaihd-maloaihd?maloaihoidap=LHD002",
+							"protocol": "http",
+							"host": [
+								"{{url}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"api",
+								"loaihoidap",
+								"loaihd-maloaihd"
+							],
+							"query": [
+								{
+									"key": "maloaihoidap",
+									"value": "LHD002"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "LoaiTaiLieu",
+			"item": [
+				{
+					"name": "HienThiLoaiTaiLieu",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJNYU5oYW5WaWVuIjoiTlYwMDEiLCJUZW4iOiJIb8OgbmciLCJIbyI6Ik5ndXnhu4VuICIsInVuaXF1ZV9uYW1lIjoiTmd1eeG7hW4gSG_DoG5nIiwiRW1haWwiOiJIb2FuZ0BnbWFpbC5jb20iLCJVc2VyTmFtZSI6ImJpZW50YXAiLCJqdGkiOiIxYzI2OTk4Yy0wMDZhLTRkMjMtODM4NC00N2Q1YzlhNWY5OWEiLCJyb2xlIjoiQmnDqm4gdOG6rXAiLCJuYmYiOjE2MjUwMTg0NTgsImV4cCI6MTY1NjU1NDQ1OCwiaWF0IjoxNjI1MDE4NDU4fQ.u5Wbal9FIIJSBfM-0sw6O-HZOJvPah9RV59NuGhUFdM",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://{{url}}:{{port}}/api/loaitailieu",
+							"protocol": "http",
+							"host": [
+								"{{url}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"api",
+								"loaitailieu"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "HienThiLoaiTaiLieuAdmin",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJNYU5oYW5WaWVuIjoiTlYwMDQiLCJUZW4iOiIgQW5oIiwiSG8iOiJExrDGoW5nIMSQ4bupYyIsInVuaXF1ZV9uYW1lIjoiRMawxqFuZyDEkOG7qWMgQW5oIiwiRW1haWwiOiJkdWNBbmhAZ21haWwuY29tIiwiVXNlck5hbWUiOiJhZG1pbiIsImp0aSI6ImQxZmZmZWYxLTY2YmUtNGU3ZS1hN2JiLWY0ODdjNTI3MTUzMCIsInJvbGUiOiJBZG1pbiIsIm5iZiI6MTYyNDk1MTgxNCwiZXhwIjoxNjU2NDg3ODE0LCJpYXQiOjE2MjQ5NTE4MTR9.ggsBLruS8URqbq8u4s_OAOdi1g7jdv2gXpRLJZTCZuk",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://{{url}}:{{port}}/api/loaitailieu/admin?pagenumber=1&pagesize=5",
+							"protocol": "http",
+							"host": [
+								"{{url}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"api",
+								"loaitailieu",
+								"admin"
+							],
+							"query": [
+								{
+									"key": "pagenumber",
+									"value": "1"
+								},
+								{
+									"key": "pagesize",
+									"value": "5"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ThemLoaiTaiLieu",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJNYU5oYW5WaWVuIjoiTlYwMDQiLCJUZW4iOiIgQW5oIiwiSG8iOiJExrDGoW5nIMSQ4bupYyIsInVuaXF1ZV9uYW1lIjoiRMawxqFuZyDEkOG7qWMgQW5oIiwiRW1haWwiOiJkdWNBbmhAZ21haWwuY29tIiwiVXNlck5hbWUiOiJhZG1pbiIsImp0aSI6ImQxZmZmZWYxLTY2YmUtNGU3ZS1hN2JiLWY0ODdjNTI3MTUzMCIsInJvbGUiOiJBZG1pbiIsIm5iZiI6MTYyNDk1MTgxNCwiZXhwIjoxNjU2NDg3ODE0LCJpYXQiOjE2MjQ5NTE4MTR9.ggsBLruS8URqbq8u4s_OAOdi1g7jdv2gXpRLJZTCZuk",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"tenloaitailieu\":\"qqqwwwwqwww1\",\r\n    \"trangthai\":false,\r\n    \"mota\":\"day la file word\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://{{url}}:{{port}}/api/loaitailieu",
+							"protocol": "http",
+							"host": [
+								"{{url}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"api",
+								"loaitailieu"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UpdateLoaiTaiLieu",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJNYU5oYW5WaWVuIjoiTlYwMDQiLCJUZW4iOiIgQW5oIiwiSG8iOiJExrDGoW5nIMSQ4bupYyIsInVuaXF1ZV9uYW1lIjoiRMawxqFuZyDEkOG7qWMgQW5oIiwiRW1haWwiOiJkdWNBbmhAZ21haWwuY29tIiwiVXNlck5hbWUiOiJhZG1pbiIsImp0aSI6IjNkNTVlMDhmLTExMGUtNDRhYy05YWE3LWE5NmQ0NDA4NmI0ZSIsInJvbGUiOiJBZG1pbiIsIm5iZiI6MTYyNTAxODkxMCwiZXhwIjoxNjU2NTU0OTEwLCJpYXQiOjE2MjUwMTg5MTB9.BhtVx_p2esD474kYDerOWu660Ny6fcIBZPOWrZoZ3Zw",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"maloaitailieu\":\"LTL010\",\r\n    \"tenloaitailieu\":\"powerpoint\",\r\n    \"trangthai\":true,\r\n    \"mota\":\"day la file powerpoint1\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://{{url}}:{{port}}/api/loaitailieu/capnhat",
+							"protocol": "http",
+							"host": [
+								"{{url}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"api",
+								"loaitailieu",
+								"capnhat"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "TrangThaiTaiLieu",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJNYU5oYW5WaWVuIjoiTlYwMDQiLCJUZW4iOiIgQW5oIiwiSG8iOiJExrDGoW5nIMSQ4bupYyIsInVuaXF1ZV9uYW1lIjoiRMawxqFuZyDEkOG7qWMgQW5oIiwiRW1haWwiOiJkdWNBbmhAZ21haWwuY29tIiwiVXNlck5hbWUiOiJhZG1pbiIsImp0aSI6IjNkNTVlMDhmLTExMGUtNDRhYy05YWE3LWE5NmQ0NDA4NmI0ZSIsInJvbGUiOiJBZG1pbiIsIm5iZiI6MTYyNTAxODkxMCwiZXhwIjoxNjU2NTU0OTEwLCJpYXQiOjE2MjUwMTg5MTB9.BhtVx_p2esD474kYDerOWu660Ny6fcIBZPOWrZoZ3Zw",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"maloaitailieu\":\"LTL008\",\r\n    \"trangthai\":true\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://{{url}}:{{port}}/api/loaitailieu/trangthai",
+							"protocol": "http",
+							"host": [
+								"{{url}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"api",
+								"loaitailieu",
+								"trangthai"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "TimKiemLoaiTaiLieuMaLoaiTaiLieu",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJNYU5oYW5WaWVuIjoiTlYwMDQiLCJUZW4iOiIgQW5oIiwiSG8iOiJExrDGoW5nIMSQ4bupYyIsInVuaXF1ZV9uYW1lIjoiRMawxqFuZyDEkOG7qWMgQW5oIiwiRW1haWwiOiJkdWNBbmhAZ21haWwuY29tIiwiVXNlck5hbWUiOiJhZG1pbiIsImp0aSI6IjdiYjc4MDExLTY4OWUtNDUyMS04MmFmLTc4MzZmZWYwYzUzMSIsInJvbGUiOiJBZG1pbiIsIm5iZiI6MTYyNTEwNjc2MywiZXhwIjoxNjU2NjQyNzYzLCJpYXQiOjE2MjUxMDY3NjN9.5gjR-DDqaEV9y9sBaLD4EKj6hTXIqLAWKxUqtLsoZlQ",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://{{url}}:{{port}}/api/loaitailieu/loaitl-maloaitl?maloaitailieu=LTL003",
+							"protocol": "http",
+							"host": [
+								"{{url}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"api",
+								"loaitailieu",
+								"loaitl-maloaitl"
+							],
+							"query": [
+								{
+									"key": "maloaitailieu",
+									"value": "LTL003"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Email",
+			"item": [
+				{
+					"name": "SendEmail",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://{{url}}:{{port}}/api/email",
+							"protocol": "http",
+							"host": [
+								"{{url}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"api",
+								"email"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "ThongBao",
+			"item": [
+				{
+					"name": "HienThiThongBao",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJNYU5oYW5WaWVuIjoiS0gwMDIiLCJUZW4iOiJExrDGoW5nIiwiSG8iOiJCw7lpIFbEg24iLCJ1bmlxdWVfbmFtZSI6IkLDuWkgVsSDbkTGsMahbmciLCJFbWFpbCI6IkR1b25nQGdtYWlsLmNvbSIsIlVzZXJOYW1lIjoiZHVvbmd0c25jMSIsInJvbGUiOiJLaMOhY2ggaMOgbmciLCJqdGkiOiIzNDA5Y2Y4MC1kOGY0LTRkOTUtOGQ0OC1kYjhmYmYzMDFlMTEiLCJuYmYiOjE2MjUzNjU0NTcsImV4cCI6MTY1NjkwMTQ1NywiaWF0IjoxNjI1MzY1NDU3fQ.rgzOZrqlyIQ3cZ8dgNVGa73vUMrZxkDnGkTj7A28AcM",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://{{url}}:{{port}}/api/thongbao?makhachhang=KH003",
+							"protocol": "http",
+							"host": [
+								"{{url}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"api",
+								"thongbao"
+							],
+							"query": [
+								{
+									"key": "makhachhang",
+									"value": "KH003"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "SoLuongThongBao",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJNYU5oYW5WaWVuIjoiS0gwMDIiLCJUZW4iOiJExrDGoW5nIiwiSG8iOiJCw7lpIFbEg24iLCJ1bmlxdWVfbmFtZSI6IkLDuWkgVsSDbkTGsMahbmciLCJFbWFpbCI6IkR1b25nQGdtYWlsLmNvbSIsIlVzZXJOYW1lIjoiZHVvbmd0c25jMSIsInJvbGUiOiJLaMOhY2ggaMOgbmciLCJqdGkiOiIzNDA5Y2Y4MC1kOGY0LTRkOTUtOGQ0OC1kYjhmYmYzMDFlMTEiLCJuYmYiOjE2MjUzNjU0NTcsImV4cCI6MTY1NjkwMTQ1NywiaWF0IjoxNjI1MzY1NDU3fQ.rgzOZrqlyIQ3cZ8dgNVGa73vUMrZxkDnGkTj7A28AcM",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://{{url}}:{{port}}/api/thongbao/soluong?makhachhang=KH002",
+							"protocol": "http",
+							"host": [
+								"{{url}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"api",
+								"thongbao",
+								"soluong"
+							],
+							"query": [
+								{
+									"key": "makhachhang",
+									"value": "KH002"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DaXemThongBao",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJNYU5oYW5WaWVuIjoiS0gwMDIiLCJUZW4iOiJExrDGoW5nIiwiSG8iOiJCw7lpIFbEg24iLCJ1bmlxdWVfbmFtZSI6IkLDuWkgVsSDbkTGsMahbmciLCJFbWFpbCI6IkR1b25nQGdtYWlsLmNvbSIsIlVzZXJOYW1lIjoiZHVvbmd0c25jMSIsInJvbGUiOiJLaMOhY2ggaMOgbmciLCJqdGkiOiIzNDA5Y2Y4MC1kOGY0LTRkOTUtOGQ0OC1kYjhmYmYzMDFlMTEiLCJuYmYiOjE2MjUzNjU0NTcsImV4cCI6MTY1NjkwMTQ1NywiaWF0IjoxNjI1MzY1NDU3fQ.rgzOZrqlyIQ3cZ8dgNVGa73vUMrZxkDnGkTj7A28AcM",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": 6\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://{{url}}:{{port}}/api/thongbao",
+							"protocol": "http",
+							"host": [
+								"{{url}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"api",
+								"thongbao"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "HienThiTatCaThongBao",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJNYU5oYW5WaWVuIjoiS0gwMDIiLCJUZW4iOiJExrDGoW5nIiwiSG8iOiJCw7lpIFbEg24iLCJ1bmlxdWVfbmFtZSI6IkLDuWkgVsSDbkTGsMahbmciLCJFbWFpbCI6IkR1b25nQGdtYWlsLmNvbSIsIlVzZXJOYW1lIjoiZHVvbmd0c25jMSIsInJvbGUiOiJLaMOhY2ggaMOgbmciLCJqdGkiOiIzNDA5Y2Y4MC1kOGY0LTRkOTUtOGQ0OC1kYjhmYmYzMDFlMTEiLCJuYmYiOjE2MjUzNjU0NTcsImV4cCI6MTY1NjkwMTQ1NywiaWF0IjoxNjI1MzY1NDU3fQ.rgzOZrqlyIQ3cZ8dgNVGa73vUMrZxkDnGkTj7A28AcM",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://{{url}}:{{port}}/api/thongbao/all?makhachhang=KH002",
+							"protocol": "http",
+							"host": [
+								"{{url}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"api",
+								"thongbao",
+								"all"
+							],
+							"query": [
+								{
+									"key": "makhachhang",
+									"value": "KH002"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "ThongTin",
+			"item": [
+				{
+					"name": "LayDanhSachThongTin",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJNYU5oYW5WaWVuIjoiTlYwMDQiLCJUZW4iOiIgQW5oIiwiSG8iOiJExrDGoW5nIMSQ4bupYyIsInVuaXF1ZV9uYW1lIjoiRMawxqFuZyDEkOG7qWMgQW5oIiwiRW1haWwiOiJkdWNBbmhAZ21haWwuY29tIiwiVXNlck5hbWUiOiJhZG1pbiIsImp0aSI6IjQ4ZTY5ZmM3LWY2YTAtNGQzZi04MzBjLWY2NmYyNDYzODdiZSIsInJvbGUiOiJBZG1pbiIsIm5iZiI6MTYyNTQyMDgyMywiZXhwIjoxNjU2OTU2ODIzLCJpYXQiOjE2MjU0MjA4MjN9.nrHmTveYGECwnySFadzu9E-WhsrhKc_EycrY3Ub6QUU",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://{{url}}:{{port}}/api/thongtin",
+							"protocol": "http",
+							"host": [
+								"{{url}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"api",
+								"thongtin"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UpdateThongTin",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJNYU5oYW5WaWVuIjoiTlYwMDQiLCJUZW4iOiIgQW5oIiwiSG8iOiJExrDGoW5nIMSQ4bupYyIsInVuaXF1ZV9uYW1lIjoiRMawxqFuZyDEkOG7qWMgQW5oIiwiRW1haWwiOiJkdWNBbmhAZ21haWwuY29tIiwiVXNlck5hbWUiOiJhZG1pbiIsImp0aSI6IjQ4ZTY5ZmM3LWY2YTAtNGQzZi04MzBjLWY2NmYyNDYzODdiZSIsInJvbGUiOiJBZG1pbiIsIm5iZiI6MTYyNTQyMDgyMywiZXhwIjoxNjU2OTU2ODIzLCJpYXQiOjE2MjU0MjA4MjN9.nrHmTveYGECwnySFadzu9E-WhsrhKc_EycrY3Ub6QUU",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": 1,\r\n    \"tencongty\": \"VCS Việt Nam\",\r\n    \"logo\": \"/images/logo.png\",\r\n    \"slogan\": \"Chúng tôi luôn mang đến cho bạn những sản phẩm công nghệ tốt nhất\",\r\n    \"subslogan\": \"Cùng nhau cố gắng mỗi ngày\",\r\n    \"linkfacebook\": \"https://facebook.com/\",\r\n    \"linkskype\": \"linkSkype\",\r\n    \"linktwitter\": \"https://twitter.com/\",\r\n    \"linkinstagram\": \"https://instagram.com\",\r\n    \"linkbando\": \"linkbando\",\r\n    \"email\": \"lienhe@phanmemvcs.com\",\r\n    \"phone\": \"1900.555.526 - (024) 3773.9829\",\r\n    \"address\": \"Tầng 2, Tòa B, Số 101 Láng Hạ, Đống Đa, Hà Nội\",\r\n    \"phonebusiness\": \"0981209212\",\r\n    \"tongdai\": \"1900.555.526\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://{{url}}:{{port}}/api/thongtin",
+							"protocol": "http",
+							"host": [
+								"{{url}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"api",
+								"thongtin"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Banner",
+			"item": [
+				{
+					"name": "HienThiDanhSachBanner",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJNYU5oYW5WaWVuIjoiTlYwMDQiLCJUZW4iOiIgQW5oIiwiSG8iOiJExrDGoW5nIMSQ4bupYyIsInVuaXF1ZV9uYW1lIjoiRMawxqFuZyDEkOG7qWMgQW5oIiwiRW1haWwiOiJkdWNBbmhAZ21haWwuY29tIiwiVXNlck5hbWUiOiJhZG1pbiIsImp0aSI6IjEzYzZlNjk5LTU5MTgtNDhhZC1iNDM1LTVjNTZiNTEyZTFiYSIsInJvbGUiOiJBZG1pbiIsIm5iZiI6MTYyNTc1NDA5NywiZXhwIjoxNjU3MjkwMDk3LCJpYXQiOjE2MjU3NTQwOTd9.u7fT84Oedy-4ZRUHTeWQ4-zFogc-pNMHjJ_p_qPXXZI",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://{{url}}:{{port}}/api/banner",
+							"protocol": "http",
+							"host": [
+								"{{url}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"api",
+								"banner"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ThemBanner",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJNYU5oYW5WaWVuIjoiTlYwMDQiLCJUZW4iOiIgQW5oIiwiSG8iOiJExrDGoW5nIMSQ4bupYyIsInVuaXF1ZV9uYW1lIjoiRMawxqFuZyDEkOG7qWMgQW5oIiwiRW1haWwiOiJkdWNBbmhAZ21haWwuY29tIiwiVXNlck5hbWUiOiJhZG1pbiIsImp0aSI6IjEzYzZlNjk5LTU5MTgtNDhhZC1iNDM1LTVjNTZiNTEyZTFiYSIsInJvbGUiOiJBZG1pbiIsIm5iZiI6MTYyNTc1NDA5NywiZXhwIjoxNjU3MjkwMDk3LCJpYXQiOjE2MjU3NTQwOTd9.u7fT84Oedy-4ZRUHTeWQ4-zFogc-pNMHjJ_p_qPXXZI",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"tenbanner\":\"Banner6\",\r\n    \"linkanh\":\"linkanh6\",\r\n    \"mota\":\"\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://{{url}}:{{port}}/api/banner",
+							"protocol": "http",
+							"host": [
+								"{{url}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"api",
+								"banner"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "XoaBanner",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJNYU5oYW5WaWVuIjoiTlYwMDQiLCJUZW4iOiIgQW5oIiwiSG8iOiJExrDGoW5nIMSQ4bupYyIsInVuaXF1ZV9uYW1lIjoiRMawxqFuZyDEkOG7qWMgQW5oIiwiRW1haWwiOiJkdWNBbmhAZ21haWwuY29tIiwiVXNlck5hbWUiOiJhZG1pbiIsImp0aSI6IjEzYzZlNjk5LTU5MTgtNDhhZC1iNDM1LTVjNTZiNTEyZTFiYSIsInJvbGUiOiJBZG1pbiIsIm5iZiI6MTYyNTc1NDA5NywiZXhwIjoxNjU3MjkwMDk3LCJpYXQiOjE2MjU3NTQwOTd9.u7fT84Oedy-4ZRUHTeWQ4-zFogc-pNMHjJ_p_qPXXZI",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://{{url}}:{{port}}/api/banner/delete?id=6",
+							"protocol": "http",
+							"host": [
+								"{{url}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"api",
+								"banner",
+								"delete"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "6"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Forum",
+			"item": [
+				{
+					"name": "GetAllBaiDang",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJNYU5oYW5WaWVuIjoiS0gwMDIiLCJUZW4iOiJExrDGoW5nIiwiSG8iOiJCw7lpIFbEg24iLCJ1bmlxdWVfbmFtZSI6IkLDuWkgVsSDbiBExrDGoW5nIiwiRW1haWwiOiJjdW9uZ210YXZpZXRuYW1AZ21haWwuY29tIiwiVXNlck5hbWUiOiJkdW9uZ3RzbmMxIiwicm9sZSI6Iktow6FjaCBow6BuZyIsImp0aSI6ImEzNzU2Y2E3LWZlNmItNDZhZC05MzY1LWVmZmY5MzhjMzRhMSIsIm5iZiI6MTYyNjAyMjQzNywiZXhwIjoxNjU3NTU4NDM3LCJpYXQiOjE2MjYwMjI0Mzd9.QBp4WHBEgs8fs07lsS0AbgB-pONQ7-j3sGgETfJORz0",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://{{url}}:{{port}}/api/forum/baidang?pagenumber=1&pagesize=2",
+							"protocol": "http",
+							"host": [
+								"{{url}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"api",
+								"forum",
+								"baidang"
+							],
+							"query": [
+								{
+									"key": "pagenumber",
+									"value": "1"
+								},
+								{
+									"key": "pagesize",
+									"value": "2"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetBaiDangKhachHang",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJNYU5oYW5WaWVuIjoiS0gwMDIiLCJUZW4iOiJExrDGoW5nIiwiSG8iOiJCw7lpIFbEg24iLCJ1bmlxdWVfbmFtZSI6IkLDuWkgVsSDbiBExrDGoW5nIiwiRW1haWwiOiJjdW9uZ210YXZpZXRuYW1AZ21haWwuY29tIiwiVXNlck5hbWUiOiJkdW9uZ3RzbmMxIiwicm9sZSI6Iktow6FjaCBow6BuZyIsImp0aSI6ImEzNzU2Y2E3LWZlNmItNDZhZC05MzY1LWVmZmY5MzhjMzRhMSIsIm5iZiI6MTYyNjAyMjQzNywiZXhwIjoxNjU3NTU4NDM3LCJpYXQiOjE2MjYwMjI0Mzd9.QBp4WHBEgs8fs07lsS0AbgB-pONQ7-j3sGgETfJORz0",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://{{url}}:{{port}}/api/forum/baidang-khachhang?makhachhang=KH002&pagenumber=1&pagesize=2",
+							"protocol": "http",
+							"host": [
+								"{{url}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"api",
+								"forum",
+								"baidang-khachhang"
+							],
+							"query": [
+								{
+									"key": "makhachhang",
+									"value": "KH002"
+								},
+								{
+									"key": "pagenumber",
+									"value": "1"
+								},
+								{
+									"key": "pagesize",
+									"value": "2"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "TongQuan",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJNYU5oYW5WaWVuIjoiS0gwMDIiLCJUZW4iOiJExrDGoW5nIiwiSG8iOiJCw7lpIFbEg24iLCJ1bmlxdWVfbmFtZSI6IkLDuWkgVsSDbiBExrDGoW5nIiwiRW1haWwiOiJjdW9uZ210YXZpZXRuYW1AZ21haWwuY29tIiwiVXNlck5hbWUiOiJkdW9uZ3RzbmMxIiwicm9sZSI6Iktow6FjaCBow6BuZyIsImp0aSI6ImEzNzU2Y2E3LWZlNmItNDZhZC05MzY1LWVmZmY5MzhjMzRhMSIsIm5iZiI6MTYyNjAyMjQzNywiZXhwIjoxNjU3NTU4NDM3LCJpYXQiOjE2MjYwMjI0Mzd9.QBp4WHBEgs8fs07lsS0AbgB-pONQ7-j3sGgETfJORz0",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://{{url}}:{{port}}/api/forum/tongquan",
+							"protocol": "http",
+							"host": [
+								"{{url}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"api",
+								"forum",
+								"tongquan"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetNhomChuDe",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJNYU5oYW5WaWVuIjoiS0gwMDIiLCJUZW4iOiJExrDGoW5nIiwiSG8iOiJCw7lpIFbEg24iLCJ1bmlxdWVfbmFtZSI6IkLDuWkgVsSDbiBExrDGoW5nIiwiRW1haWwiOiJjdW9uZ210YXZpZXRuYW1AZ21haWwuY29tIiwiVXNlck5hbWUiOiJkdW9uZ3RzbmMxIiwicm9sZSI6Iktow6FjaCBow6BuZyIsImp0aSI6ImEzNzU2Y2E3LWZlNmItNDZhZC05MzY1LWVmZmY5MzhjMzRhMSIsIm5iZiI6MTYyNjAyMjQzNywiZXhwIjoxNjU3NTU4NDM3LCJpYXQiOjE2MjYwMjI0Mzd9.QBp4WHBEgs8fs07lsS0AbgB-pONQ7-j3sGgETfJORz0",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://{{url}}:{{port}}/api/forum/nhomchude",
+							"protocol": "http",
+							"host": [
+								"{{url}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"api",
+								"forum",
+								"nhomchude"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetNhomChuDeA",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJNYU5oYW5WaWVuIjoiTlYwMDQiLCJUZW4iOiIgQW5oIiwiSG8iOiJExrDGoW5nIMSQ4bupYyIsInVuaXF1ZV9uYW1lIjoiRMawxqFuZyDEkOG7qWMgQW5oIiwiRW1haWwiOiJkdWNBbmhAZ21haWwuY29tIiwiVXNlck5hbWUiOiJhZG1pbiIsImp0aSI6Ijc1ZTY3MzgwLTdmNzAtNGZmZC1hOTAzLTlmYjcwNTNlZTkwNyIsInJvbGUiOiJBZG1pbiIsIm5iZiI6MTYyNjA2NDkxOCwiZXhwIjoxNjU3NjAwOTE4LCJpYXQiOjE2MjYwNjQ5MTh9.fT7jitZDzDwJCKbc4h7v2pfhozxCZ_S1Fjjzherge4Y",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://{{url}}:{{port}}/api/forum/nhomchudea",
+							"protocol": "http",
+							"host": [
+								"{{url}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"api",
+								"forum",
+								"nhomchudea"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetChuDe",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJNYU5oYW5WaWVuIjoiS0gwMDIiLCJUZW4iOiJExrDGoW5nIiwiSG8iOiJCw7lpIFbEg24iLCJ1bmlxdWVfbmFtZSI6IkLDuWkgVsSDbiBExrDGoW5nIiwiRW1haWwiOiJjdW9uZ210YXZpZXRuYW1AZ21haWwuY29tIiwiVXNlck5hbWUiOiJkdW9uZ3RzbmMxIiwicm9sZSI6Iktow6FjaCBow6BuZyIsImp0aSI6ImEzNzU2Y2E3LWZlNmItNDZhZC05MzY1LWVmZmY5MzhjMzRhMSIsIm5iZiI6MTYyNjAyMjQzNywiZXhwIjoxNjU3NTU4NDM3LCJpYXQiOjE2MjYwMjI0Mzd9.QBp4WHBEgs8fs07lsS0AbgB-pONQ7-j3sGgETfJORz0",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://{{url}}:{{port}}/api/forum/chude",
+							"protocol": "http",
+							"host": [
+								"{{url}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"api",
+								"forum",
+								"chude"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetBinhLuanBaiDang",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJNYU5oYW5WaWVuIjoiS0gwMDIiLCJUZW4iOiJExrDGoW5nIiwiSG8iOiJCw7lpIFbEg24iLCJ1bmlxdWVfbmFtZSI6IkLDuWkgVsSDbiBExrDGoW5nIiwiRW1haWwiOiJjdW9uZ210YXZpZXRuYW1AZ21haWwuY29tIiwiVXNlck5hbWUiOiJkdW9uZ3RzbmMxIiwicm9sZSI6Iktow6FjaCBow6BuZyIsImp0aSI6ImEzNzU2Y2E3LWZlNmItNDZhZC05MzY1LWVmZmY5MzhjMzRhMSIsIm5iZiI6MTYyNjAyMjQzNywiZXhwIjoxNjU3NTU4NDM3LCJpYXQiOjE2MjYwMjI0Mzd9.QBp4WHBEgs8fs07lsS0AbgB-pONQ7-j3sGgETfJORz0",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://{{url}}:{{port}}/api/forum/binhluan-baidang?mabaidang=BD002",
+							"protocol": "http",
+							"host": [
+								"{{url}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"api",
+								"forum",
+								"binhluan-baidang"
+							],
+							"query": [
+								{
+									"key": "mabaidang",
+									"value": "BD002"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetBaiDangTieuDe",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJNYU5oYW5WaWVuIjoiS0gwMDIiLCJUZW4iOiJExrDGoW5nIiwiSG8iOiJCw7lpIFbEg24iLCJ1bmlxdWVfbmFtZSI6IkLDuWkgVsSDbiBExrDGoW5nIiwiRW1haWwiOiJjdW9uZ210YXZpZXRuYW1AZ21haWwuY29tIiwiVXNlck5hbWUiOiJkdW9uZ3RzbmMxIiwicm9sZSI6Iktow6FjaCBow6BuZyIsImp0aSI6ImEzNzU2Y2E3LWZlNmItNDZhZC05MzY1LWVmZmY5MzhjMzRhMSIsIm5iZiI6MTYyNjAyMjQzNywiZXhwIjoxNjU3NTU4NDM3LCJpYXQiOjE2MjYwMjI0Mzd9.QBp4WHBEgs8fs07lsS0AbgB-pONQ7-j3sGgETfJORz0",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://{{url}}:{{port}}/api/forum/baidang-tieude?tieude=Q&pagenumber=1&pagesize=20",
+							"protocol": "http",
+							"host": [
+								"{{url}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"api",
+								"forum",
+								"baidang-tieude"
+							],
+							"query": [
+								{
+									"key": "tieude",
+									"value": "Q"
+								},
+								{
+									"key": "pagenumber",
+									"value": "1"
+								},
+								{
+									"key": "pagesize",
+									"value": "20"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "AddBinhLuan",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJNYU5oYW5WaWVuIjoiS0gwMDIiLCJUZW4iOiJExrDGoW5nIiwiSG8iOiJCw7lpIFbEg24iLCJ1bmlxdWVfbmFtZSI6IkLDuWkgVsSDbiBExrDGoW5nIiwiRW1haWwiOiJjdW9uZ210YXZpZXRuYW1AZ21haWwuY29tIiwiVXNlck5hbWUiOiJkdW9uZ3RzbmMxIiwicm9sZSI6Iktow6FjaCBow6BuZyIsImp0aSI6ImEzNzU2Y2E3LWZlNmItNDZhZC05MzY1LWVmZmY5MzhjMzRhMSIsIm5iZiI6MTYyNjAyMjQzNywiZXhwIjoxNjU3NTU4NDM3LCJpYXQiOjE2MjYwMjI0Mzd9.QBp4WHBEgs8fs07lsS0AbgB-pONQ7-j3sGgETfJORz0",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"noidung\":\"aaaaaa\",\r\n    \"ngaytao\":\"29-01-2021\",\r\n    \"mabaidang\":\"BD001\",\r\n    \"makhachhang\":\"KH003\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://{{url}}:{{port}}/api/forum/binhluan",
+							"protocol": "http",
+							"host": [
+								"{{url}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"api",
+								"forum",
+								"binhluan"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UpdateHotTrend",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJNYU5oYW5WaWVuIjoiS0gwMDIiLCJUZW4iOiJExrDGoW5nIiwiSG8iOiJCw7lpIFbEg24iLCJ1bmlxdWVfbmFtZSI6IkLDuWkgVsSDbiBExrDGoW5nIiwiRW1haWwiOiJjdW9uZ210YXZpZXRuYW1AZ21haWwuY29tIiwiVXNlck5hbWUiOiJkdW9uZ3RzbmMxIiwicm9sZSI6Iktow6FjaCBow6BuZyIsImp0aSI6ImEzNzU2Y2E3LWZlNmItNDZhZC05MzY1LWVmZmY5MzhjMzRhMSIsIm5iZiI6MTYyNjAyMjQzNywiZXhwIjoxNjU3NTU4NDM3LCJpYXQiOjE2MjYwMjI0Mzd9.QBp4WHBEgs8fs07lsS0AbgB-pONQ7-j3sGgETfJORz0",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"mabaidang\":\"BD001\",\r\n    \"hot\":true\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://{{url}}:{{port}}/api/forum/hottrend",
+							"protocol": "http",
+							"host": [
+								"{{url}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"api",
+								"forum",
+								"hottrend"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UpdateSoLuong",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJNYU5oYW5WaWVuIjoiS0gwMDIiLCJUZW4iOiJExrDGoW5nIiwiSG8iOiJCw7lpIFbEg24iLCJ1bmlxdWVfbmFtZSI6IkLDuWkgVsSDbiBExrDGoW5nIiwiRW1haWwiOiJjdW9uZ210YXZpZXRuYW1AZ21haWwuY29tIiwiVXNlck5hbWUiOiJkdW9uZ3RzbmMxIiwicm9sZSI6Iktow6FjaCBow6BuZyIsImp0aSI6ImEzNzU2Y2E3LWZlNmItNDZhZC05MzY1LWVmZmY5MzhjMzRhMSIsIm5iZiI6MTYyNjAyMjQzNywiZXhwIjoxNjU3NTU4NDM3LCJpYXQiOjE2MjYwMjI0Mzd9.QBp4WHBEgs8fs07lsS0AbgB-pONQ7-j3sGgETfJORz0",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"mabaidang\":\"BD001\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://{{url}}:{{port}}/api/forum/soluong",
+							"protocol": "http",
+							"host": [
+								"{{url}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"api",
+								"forum",
+								"soluong"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DeleteBaiDang",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJNYU5oYW5WaWVuIjoiTlYwMDQiLCJUZW4iOiIgQW5oIiwiSG8iOiJExrDGoW5nIMSQ4bupYyIsInVuaXF1ZV9uYW1lIjoiRMawxqFuZyDEkOG7qWMgQW5oIiwiRW1haWwiOiJkdWNBbmhAZ21haWwuY29tIiwiVXNlck5hbWUiOiJhZG1pbiIsImp0aSI6IjBlNmFmZTAzLWFiY2MtNGE4NS05NmEwLWM5OTJlZWY4YTI1YyIsInJvbGUiOiJBZG1pbiIsIm5iZiI6MTYyNjE3OTk4NSwiZXhwIjoxNjU3NzE1OTg1LCJpYXQiOjE2MjYxNzk5ODV9.RZniLkASsA_XcLCKt2fUaC-L7GiiDUtiPMc-P0azcjM",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"mabaidang\":\"BD003\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://{{url}}:{{port}}/api/forum/xoabaidang",
+							"protocol": "http",
+							"host": [
+								"{{url}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"api",
+								"forum",
+								"xoabaidang"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DeleteChuDe",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJNYU5oYW5WaWVuIjoiTlYwMDQiLCJUZW4iOiIgQW5oIiwiSG8iOiJExrDGoW5nIMSQ4bupYyIsInVuaXF1ZV9uYW1lIjoiRMawxqFuZyDEkOG7qWMgQW5oIiwiRW1haWwiOiJkdWNBbmhAZ21haWwuY29tIiwiVXNlck5hbWUiOiJhZG1pbiIsImp0aSI6IjBlNmFmZTAzLWFiY2MtNGE4NS05NmEwLWM5OTJlZWY4YTI1YyIsInJvbGUiOiJBZG1pbiIsIm5iZiI6MTYyNjE3OTk4NSwiZXhwIjoxNjU3NzE1OTg1LCJpYXQiOjE2MjYxNzk5ODV9.RZniLkASsA_XcLCKt2fUaC-L7GiiDUtiPMc-P0azcjM",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"machude\":\"CD00001\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://{{url}}:{{port}}/api/forum/xoachude",
+							"protocol": "http",
+							"host": [
+								"{{url}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"api",
+								"forum",
+								"xoachude"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "AddBaiDang",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJNYU5oYW5WaWVuIjoiS0gwMDIiLCJUZW4iOiJExrDGoW5nIiwiSG8iOiJCw7lpIFbEg24iLCJ1bmlxdWVfbmFtZSI6IkLDuWkgVsSDbiBExrDGoW5nIiwiRW1haWwiOiJjdW9uZ210YXZpZXRuYW1AZ21haWwuY29tIiwiVXNlck5hbWUiOiJkdW9uZ3RzbmMxIiwicm9sZSI6Iktow6FjaCBow6BuZyIsImp0aSI6Ijc5MWVjMzUyLWVjYTAtNDJkYi04OTkwLTk1OTZiYjI3ODAyZSIsIm5iZiI6MTYyNjE4NTM3MCwiZXhwIjoxNjU3NzIxMzcwLCJpYXQiOjE2MjYxODUzNzB9.R_LshLVzQmnQKNXoya17rbCrdpjmJe1LASRqjCqkahI",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://{{url}}:{{port}}/api/forum/baidang",
+							"protocol": "http",
+							"host": [
+								"{{url}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"api",
+								"forum",
+								"baidang"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DeleteBinhLuan",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJNYU5oYW5WaWVuIjoiTlYwMDQiLCJUZW4iOiIgQW5oIiwiSG8iOiJExrDGoW5nIMSQ4bupYyIsInVuaXF1ZV9uYW1lIjoiRMawxqFuZyDEkOG7qWMgQW5oIiwiRW1haWwiOiJkdWNBbmhAZ21haWwuY29tIiwiVXNlck5hbWUiOiJhZG1pbiIsImp0aSI6IjBlNmFmZTAzLWFiY2MtNGE4NS05NmEwLWM5OTJlZWY4YTI1YyIsInJvbGUiOiJBZG1pbiIsIm5iZiI6MTYyNjE3OTk4NSwiZXhwIjoxNjU3NzE1OTg1LCJpYXQiOjE2MjYxNzk5ODV9.RZniLkASsA_XcLCKt2fUaC-L7GiiDUtiPMc-P0azcjM",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://{{url}}:{{port}}/api/forum/xoabinhluan?id=1",
+							"protocol": "http",
+							"host": [
+								"{{url}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"api",
+								"forum",
+								"xoabinhluan"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "AddChuDe",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJNYU5oYW5WaWVuIjoiTlYwMDQiLCJUZW4iOiIgQW5oIiwiSG8iOiJExrDGoW5nIMSQ4bupYyIsInVuaXF1ZV9uYW1lIjoiRMawxqFuZyDEkOG7qWMgQW5oIiwiRW1haWwiOiJkdWNBbmhAZ21haWwuY29tIiwiVXNlck5hbWUiOiJhZG1pbiIsImp0aSI6IjBlNmFmZTAzLWFiY2MtNGE4NS05NmEwLWM5OTJlZWY4YTI1YyIsInJvbGUiOiJBZG1pbiIsIm5iZiI6MTYyNjE3OTk4NSwiZXhwIjoxNjU3NzE1OTg1LCJpYXQiOjE2MjYxNzk5ODV9.RZniLkASsA_XcLCKt2fUaC-L7GiiDUtiPMc-P0azcjM",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://{{url}}:{{port}}/api/forum/chude",
+							"protocol": "http",
+							"host": [
+								"{{url}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"api",
+								"forum",
+								"chude"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "AddNhomChuDe",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJNYU5oYW5WaWVuIjoiTlYwMDQiLCJUZW4iOiIgQW5oIiwiSG8iOiJExrDGoW5nIMSQ4bupYyIsInVuaXF1ZV9uYW1lIjoiRMawxqFuZyDEkOG7qWMgQW5oIiwiRW1haWwiOiJkdWNBbmhAZ21haWwuY29tIiwiVXNlck5hbWUiOiJhZG1pbiIsImp0aSI6IjBlNmFmZTAzLWFiY2MtNGE4NS05NmEwLWM5OTJlZWY4YTI1YyIsInJvbGUiOiJBZG1pbiIsIm5iZiI6MTYyNjE3OTk4NSwiZXhwIjoxNjU3NzE1OTg1LCJpYXQiOjE2MjYxNzk5ODV9.RZniLkASsA_XcLCKt2fUaC-L7GiiDUtiPMc-P0azcjM",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://{{url}}:{{port}}/api/forum/nhomchude",
+							"protocol": "http",
+							"host": [
+								"{{url}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"api",
+								"forum",
+								"nhomchude"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetBaiDangMaBaiDang",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJNYU5oYW5WaWVuIjoiS0gwMDIiLCJUZW4iOiJExrDGoW5nIiwiSG8iOiJCw7lpIFbEg24iLCJ1bmlxdWVfbmFtZSI6IkLDuWkgVsSDbiBExrDGoW5nIiwiRW1haWwiOiJjdW9uZ210YXZpZXRuYW1AZ21haWwuY29tIiwiVXNlck5hbWUiOiJkdW9uZ3RzbmMxIiwicm9sZSI6Iktow6FjaCBow6BuZyIsImp0aSI6Ijc5MWVjMzUyLWVjYTAtNDJkYi04OTkwLTk1OTZiYjI3ODAyZSIsIm5iZiI6MTYyNjE4NTM3MCwiZXhwIjoxNjU3NzIxMzcwLCJpYXQiOjE2MjYxODUzNzB9.R_LshLVzQmnQKNXoya17rbCrdpjmJe1LASRqjCqkahI",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://{{url}}:{{port}}/api/forum/baidang-mabaidang?mabaidang=BD0",
+							"protocol": "http",
+							"host": [
+								"{{url}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"api",
+								"forum",
+								"baidang-mabaidang"
+							],
+							"query": [
+								{
+									"key": "mabaidang",
+									"value": "BD0"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetBaiDangMaChuDe",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJNYU5oYW5WaWVuIjoiS0gwMDIiLCJUZW4iOiJExrDGoW5nIiwiSG8iOiJCw7lpIFbEg24iLCJ1bmlxdWVfbmFtZSI6IkLDuWkgVsSDbiBExrDGoW5nIiwiRW1haWwiOiJjdW9uZ210YXZpZXRuYW1AZ21haWwuY29tIiwiVXNlck5hbWUiOiJkdW9uZ3RzbmMxIiwicm9sZSI6Iktow6FjaCBow6BuZyIsImp0aSI6Ijc5MWVjMzUyLWVjYTAtNDJkYi04OTkwLTk1OTZiYjI3ODAyZSIsIm5iZiI6MTYyNjE4NTM3MCwiZXhwIjoxNjU3NzIxMzcwLCJpYXQiOjE2MjYxODUzNzB9.R_LshLVzQmnQKNXoya17rbCrdpjmJe1LASRqjCqkahI",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://{{url}}:{{port}}/api/forum/baidang-machude?machude=CD0&pagenumber=1&pagesize=2",
+							"protocol": "http",
+							"host": [
+								"{{url}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"api",
+								"forum",
+								"baidang-machude"
+							],
+							"query": [
+								{
+									"key": "machude",
+									"value": "CD0"
+								},
+								{
+									"key": "pagenumber",
+									"value": "1"
+								},
+								{
+									"key": "pagesize",
+									"value": "2"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
